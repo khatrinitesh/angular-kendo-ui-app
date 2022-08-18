@@ -1,0 +1,29 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+<h4>CALENDAR - OVERVIEW</h4>
+<div class="row example-wrapper">
+    <div class="col-xs-12 col-md-6 example-col">
+        <p>Infinite Calendar</p>
+        <kendo-calendar type="infinite" [animateNavigation]="true"></kendo-calendar>
+    </div>
+    <div class="col-xs-12 col-md-6 example-col">
+        <p>Classic Calendar</p>
+        <kendo-calendar type="classic"></kendo-calendar>
+    </div>
+</div>
+<h4>CALENDAR - SELECTION NODES</h4>
+<kendo-calendar selection="multiple" [weekNumber]="true" [disabledDates]="disabledDates"
+    (valueChange)="onChange($event)"></kendo-calendar>
+<h4>CALENDAR - DISABLED</h4>
+<kendo-calendar [disabled]="true" selection="multiple" [weekNumber]="true" [disabledDates]="disabledDates"
+    (valueChange)="onChange($event)"></kendo-calendar>
+
+<h4>CALENDAR - FOCUSED AND STATED DATES</h4>
+<kendo-calendar [focusedDate]="focusedDate"></kendo-calendar>
+<h4>CALENDAR - DISABLED DATES</h4>
+<kendo-calendar [disabledDates]="disabledDates1"></kendo-calendar>
+<h4>CALENDAR - DISABLED DATES USING A FUNCTION</h4>
+<kendo-calendar [disabledDates]="disabledDates3"></kendo-calendar>
+<h4>CALENDAR - DISABLED DATES USING A DAY ARRAY</h4>
+<kendo-calendar [disabledDates]="disabledDates4">
+</kendo-calendar>

@@ -1,0 +1,85 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+
+<div class="example-wrapper">
+    <div>
+        <h6>small</h6>
+        <input disabled type="radio" size="small" kendoRadioButton checked />
+    </div>
+    <div>
+        <h6>medium</h6>
+        <input disabled type="radio" size="medium" kendoRadioButton checked />
+    </div>
+    <div>
+        <h6>large</h6>
+        <input disabled type="radio" size="large" kendoRadioButton checked />
+    </div>
+    <div>
+        <h6>Custom</h6>
+        <input type="radio" class="custom_size" size="none" kendoRadioButton checked />
+    </div>
+</div>
+
+<!-- <div class="example">
+    <form class="k-form" [formGroup]="form">
+        <kendo-formfield showHints="initial">
+            <label class="k-label">Type of Confirmation</label>
+            <ul class="k-radio-list">
+                <li class="k-radio-item">
+                    <input type="radio" #phoneCall value="phoneCall" kendoRadioButton formControlName="confirmation" />
+                    <kendo-label class="k-radio-label" [for]="phoneCall" text="Phone Call"></kendo-label>
+                </li>
+
+                <li class="k-radio-item">
+                    <input type="radio" #email kendoRadioButton value="email" formControlName="confirmation" />
+                    <kendo-label class="k-radio-label" [for]="email" text="Via Email"></kendo-label>
+                </li>
+            </ul>
+            <kendo-formhint>Hint: Choose a way to receive a confirmation</kendo-formhint>
+            <kendo-formerror>Error: This field is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield orientation="horizontal" showHints="initial">
+            <label class="k-label">Gender</label>
+
+            <ul class="k-radio-list k-list-horizontal">
+                <li class="k-radio-item">
+                    <input type="radio" #male value="male" kendoRadioButton formControlName="gender" />
+                    <kendo-label class="k-radio-label" [for]="male" text="Male"></kendo-label>
+                </li>
+
+                <li class="k-radio-item">
+                    <input type="radio" #female value="female" kendoRadioButton formControlName="gender" />
+                    <kendo-label class="k-radio-label" [for]="female" text="Female"></kendo-label>
+                </li>
+
+                <li class="k-radio-item">
+                    <input type="radio" #other value="other" kendoRadioButton formControlName="gender" />
+                    <kendo-label class="k-radio-label" [for]="other" text="Other"></kendo-label>
+                </li>
+            </ul>
+
+            <kendo-formerror>Error: This field is required</kendo-formerror>
+        </kendo-formfield>
+        <div class="k-form-buttons">
+            <button kendoButton themeColor="primary" (click)="submitForm()">
+                Submit
+            </button>
+        </div>
+    </form>
+</div> -->
+
+<!-- <label class="k-label" [for]="male">Male</label>
+<input type="radio" kendoRadioButton name='gender' [(ngModel)]="model.gender" value="male" #male />
+
+<label class="k-label" [for]="female">Female</label>
+<input type="radio" kendoRadioButton name='gender' [(ngModel)]="model.gender" value="female" #female />
+
+<label class="k-label" [for]="other">Other</label>
+<input type="radio" kendoRadioButton name='gender' [(ngModel)]="model.gender" value="other" #other /> -->
+
+<hr />
+<p>{{model | json}}</p>
+
+<kendo-label class="k-radio-label" [for]="terms" text="Accept terms & conditions"></kendo-label>
+<input type="radio" #terms kendoRadioButton />

@@ -1,0 +1,115 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+
+<hr />
+
+<form class="k-form">
+    <kendo-formfield>
+        <kendo-label [for]="firstName" text="First Name"></kendo-label>
+        <input [style.width.px]="200" kendoTextBox name="name" [(ngModel)]="name" #firstName required />
+
+        <kendo-formhint>Your first name</kendo-formhint>
+        <kendo-formerror>Error: First name is required</kendo-formerror>
+    </kendo-formfield>
+    <kendo-formfield [style.width.px]="200">
+        <kendo-label [for]="birthDatePicker" [optional]="true" text="Birth Date"></kendo-label>
+        <kendo-datepicker #birthDatePicker name="birthDate" [(ngModel)]="birthDate" [min]="min" [max]="max">
+        </kendo-datepicker>
+
+        <kendo-formhint>Your birth date</kendo-formhint>
+    </kendo-formfield>
+</form>
+
+<!-- <form class="k-form k-form-horizontal" [formGroup]="userForm">
+    <fieldset class="k-form-fieldset">
+        <legend class="k-form-legend">Account Details</legend>
+        <kendo-formfield orientation="horizontal">
+            <kendo-label [for]="userName" text="Username"></kendo-label>
+            <input formControlName="userName" kendoTextBox #userName required />
+
+            <kendo-formhint>Your username</kendo-formhint>
+            <kendo-formerror>Error: Username is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield orientation="horizontal">
+            <kendo-label [for]="email" text="Email"></kendo-label>
+            <input formControlName="email" kendoTextBox #email />
+
+            <kendo-formhint>Your email address</kendo-formhint>
+            <kendo-formerror *ngIf="userForm.controls.email.errors?.email">Error: Not valid email format
+            </kendo-formerror>
+            <kendo-formerror *ngIf="userForm.controls.email.errors?.required">Error: Username is required
+            </kendo-formerror>
+        </kendo-formfield>
+    </fieldset>
+</form> -->
+
+<!-- <div class="example-wrap">
+    <form class="k-form" [formGroup]="userForm">
+        <kendo-formfield>
+            <kendo-label [for]="userName" text="Username"></kendo-label>
+            <input formControlName="userName" kendoTextBox #userName required />
+
+            <kendo-formhint align="start">Your username</kendo-formhint>
+            <kendo-formerror align="end">Error: Username is required</kendo-formerror>
+        </kendo-formfield>
+    </form>
+</div> -->
+
+<!-- <accountform></accountform> -->
+
+<!-- <div class="example-wrap">
+    <form class="k-form" [formGroup]="registerForm">
+        <fieldset class="k-form-fieldset">
+            <legend class="k-form-legend">User Details</legend>
+            <kendo-formfield>
+                <kendo-label [for]="firstName" text="First Name"></kendo-label>
+                <input formControlName="firstName" kendoTextBox #firstName required />
+
+                <kendo-formhint>Your first name</kendo-formhint>
+                <kendo-formerror>Error: First name is required</kendo-formerror>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label [for]="lastName" text="Last Name"></kendo-label>
+                <input formControlName="lastName" kendoTextBox #lastName required />
+
+                <kendo-formhint>Your last name</kendo-formhint>
+                <kendo-formerror>Error: Last name is required</kendo-formerror>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label [for]="birthDate" [optional]="true" text="Birth Date"></kendo-label>
+                <kendo-datepicker #birthDate formControlName="birthDate" [min]="min" [max]="max">
+                </kendo-datepicker>
+
+                <kendo-formhint>Your birth date</kendo-formhint>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label [for]="email" text="Email"></kendo-label>
+                <input formControlName="email" kendoTextBox #email required />
+
+                <kendo-formhint>Your active email</kendo-formhint>
+                <kendo-formerror>Error: Not valid email format</kendo-formerror>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <div class="k-checkbox-wrap">
+                    <input #acceptNews type="checkbox" kendoCheckBox formControlName="acceptNews" />
+                    <kendo-label [for]="acceptNews" class="k-checkbox-label" text="I want to receive notifications">
+                    </kendo-label>
+                </div>
+
+                <kendo-formhint>You will receive our latest updates and promotions on your
+                    email</kendo-formhint>
+            </kendo-formfield>
+
+            <div class="k-form-buttons">
+                <button kendoButton themeColor="primary" (click)="submitForm()">
+                    Submit
+                </button>
+                <button kendoButton (click)="clearForm()">Clear</button>
+            </div>
+        </fieldset>
+    </form>
+</div> -->

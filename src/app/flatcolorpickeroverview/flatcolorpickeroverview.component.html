@@ -1,0 +1,135 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+
+<hr />
+
+<div class="example">
+    <kendo-colorpicker (open)="onOpen()" (close)="onClose()" (focus)="onFocus()" (blur)="onBlur()"
+        (valueChange)="onChange($event)" (activeColorClick)="onActiveColorClick($event)"
+        (activeViewChange)="onActiveViewChange($event)">
+    </kendo-colorpicker>
+</div>
+<div class="example">
+    <eventlog title="Event log" [events]="events"></eventlog>
+</div>
+
+
+<!-- <div class="example-config">
+    <div>
+        <strong>Selected color: {{ color?.value || "N/A" }}</strong>
+    </div>
+    <div>
+        <strong>Valid: {{ color?.valid }}</strong> |
+        <strong>Pristine: {{ color?.pristine }}</strong> |
+        <strong>Touched: {{ color?.touched }}</strong>
+    </div>
+</div>
+<div class="example-wrapper">
+    <form [formGroup]="form" class="form">
+        <kendo-colorpicker [formControl]="color"> </kendo-colorpicker>
+    </form>
+    <button type="button" kendoButton (click)="color?.reset()">Reset</button>
+</div> -->
+
+<!-- <div class="example-config">
+    <div>
+        <strong>Selected color: {{ color || "N/A" }}</strong>
+    </div>
+    <div>
+        <strong>Valid: {{ templateForm.controls.color?.valid }}</strong> |
+        <strong>Pristine: {{ templateForm.controls.color?.pristine }}</strong> |
+        <strong>Touched: {{ templateForm.controls.color?.touched }}</strong>
+    </div>
+</div>
+<div class="example-wrapper">
+    <form #templateForm="ngForm" class="form">
+        <kendo-colorpicker activeView="palette" format="hex" name="color" [(ngModel)]="color" required>
+        </kendo-colorpicker>
+    </form>
+    <button type="button" kendoButton (click)="templateForm.controls.color?.reset()">
+        Reset
+    </button>
+</div> -->
+
+<!-- <div class="example-config">
+    <button kendoButton (click)="picker.toggle(true)">Open</button>
+    <button kendoButton (click)="picker.toggle(false)">Close</button>
+</div>
+<kendo-colorpicker #picker (close)="$event.preventDefault()">
+</kendo-colorpicker> -->
+
+<!-- <div class="example-config">
+    <input type="checkbox" kendoCheckBox id="readonly" [(ngModel)]="isReadonly" />
+    <label class="k-checkbox-label" for="readonly">Readonly</label>
+</div>
+<kendo-colorpicker [readonly]="isReadonly"> </kendo-colorpicker> -->
+
+
+<!-- <div class="example-config">
+    <input type="checkbox" kendoCheckBox id="disabled" [(ngModel)]="isDisabled" />
+    <label class="k-checkbox-label" for="disabled">Disabled</label>
+</div>
+<kendo-flatcolorpicker [disabled]="isDisabled"> </kendo-flatcolorpicker> -->
+
+
+<!-- <div class="example-wrapper">
+    <div class="example-config">
+        Try to apply different colors to the text on right side. Notice how the
+        text becomes gradually harder for reading when the contrast ratio
+        becomes smaller.
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 example-col">
+            <kendo-flatcolorpicker [value]="selected2" (valueChange)="onChange2($event)" [gradientSettings]="settings">
+            </kendo-flatcolorpicker>
+        </div>
+        <div class="col-xs-12 col-sm-6 example-col">
+            <p [style.color]="selected2" class="text-wrapper">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not
+                only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="example-wrapper">
+    <kendo-flatcolorpicker [value]="selected" [preview]="preview" (valueChange)="onChange($event)">
+    </kendo-flatcolorpicker>
+    <div class="example" [ngStyle]="{ 'background-color': selected }">
+        <div class="kendoka"></div>
+    </div>
+</div> -->
+
+<!-- <div class="example-wrapper">
+    <div class="wrapper">
+        <h6>Gradient, Palette</h6>
+        <div>
+            <kendo-flatcolorpicker [value]="value" [preview]="false"></kendo-flatcolorpicker>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h6>Gradient</h6>
+        <div>
+            <kendo-flatcolorpicker [views]="['gradient']" [value]="value" [preview]="false"></kendo-flatcolorpicker>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h6>Palette, Gradient</h6>
+        <div>
+            <kendo-flatcolorpicker [views]="['palette', 'gradient']" [value]="value" [preview]="false">
+            </kendo-flatcolorpicker>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h6>Palette</h6>
+        <div>
+            <kendo-flatcolorpicker [views]="['palette']" [value]="value" [preview]="false"></kendo-flatcolorpicker>
+        </div>
+    </div>
+</div> -->

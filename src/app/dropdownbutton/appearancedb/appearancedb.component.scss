@@ -1,0 +1,20 @@
+
+ .example-config {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .custom-rounded > .k-button {
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+      }
+
+.example {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 40px;
+      }
+
+      .custom-size > .k-button {
+        padding: 10px 20px;
+      }

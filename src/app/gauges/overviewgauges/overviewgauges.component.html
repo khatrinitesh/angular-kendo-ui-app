@@ -1,0 +1,400 @@
+<kendo-lineargauge [pointer]="{ value: value }" [scale]="{ vertical: false, labels: { format: 'c' } }">
+</kendo-lineargauge>
+
+<!-- <kendo-lineargauge [pointer]="{ value: value }" [scale]="{ vertical: false, labels: { format: 'c' } }">
+</kendo-lineargauge> -->
+
+<!-- <div class="example-config">
+    <button kendoButton style="margin:5px;" (click)="exportGauge(linear)">
+        Export Linear Gauge
+    </button>
+    <button kendoButton style="margin:5px;" (click)="exportGauge(radial)">
+        Export Radial Gauge
+    </button>
+    <button kendoButton style="margin:5px;" (click)="exportGauge(circular)">
+        Export Circular Gauge
+    </button>
+    <button kendoButton style="margin:5px;" (click)="exportGauge(arc)">
+        Export Arc Gauge
+    </button>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-2">
+        <kendo-lineargauge #linear [pointer]="{ value: value }">
+        </kendo-lineargauge>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <kendo-radialgauge #radial [pointer]="{ value: value }">
+        </kendo-radialgauge>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <kendo-circulargauge #circular [value]="value">
+            <ng-template kendoCircularGaugeCenterTemplate let-value="value">
+                {{ value }}
+            </ng-template>
+        </kendo-circulargauge>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <kendo-arcgauge #arc [value]="value">
+            <ng-template kendoArcGaugeCenterTemplate let-value="value">
+                {{ value }}
+            </ng-template>
+        </kendo-arcgauge>
+    </div>
+</div> -->
+
+<!-- <div class="example-config">
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+            <input type="checkbox" [(ngModel)]="showLabels" kendoCheckBox />
+            <kendo-label text="Show Labels"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <input type="checkbox" [(ngModel)]="showTicks" kendoCheckBox />
+            <kendo-label text="Show Ticks"></kendo-label>
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+            <kendo-colorpicker [(value)]="ticksColor"></kendo-colorpicker>
+            <kendo-label text="Ticks Color:">{{ ticksColor }}</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <kendo-colorpicker [(value)]="labelsColor"></kendo-colorpicker>
+            <kendo-label text="Labels Color:">{{ labelsColor }}</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <kendo-numerictextbox [style.width.px]="180" [autoCorrect]="autoCorrect" [min]="1" [max]="30"
+                [(value)]="rangeSize">
+            </kendo-numerictextbox>
+            <kendo-label text="Range Size"></kendo-label>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+            <kendo-colorpicker [(value)]="rangePlaceholderColor"></kendo-colorpicker>
+            <kendo-label text="Range Placeholder Color:">{{
+                rangePlaceholderColor
+                }}</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="-90" [max]="90" [smallStep]="1" [(ngModel)]="startAngle">
+            </kendo-slider>
+            <kendo-label text="Start Angle" style="position: absolute; top: 5px;">({{ startAngle }})</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="90" [max]="270" [smallStep]="1" [(ngModel)]="endAngle">
+            </kendo-slider>
+            <kendo-label text="End Angle" style="position: absolute; top: 5px;">({{ endAngle }})</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="0" [max]="100" [smallStep]="1" [(ngModel)]="value">
+            </kendo-slider>
+            <kendo-label text="Value" style="position: absolute; top: 5px;">({{ value }})</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <input type="checkbox" [(ngModel)]="reverse" kendoCheckBox />
+            <kendo-label text="Reverse"></kendo-label>
+        </div>
+    </div>
+</div>
+<kendo-radialgauge [pointer]="[{ value: value }]" [transitions]="false" style="display:block;height:250px;">
+    <kendo-radialgauge-scale [majorTicks]="{ visible: showTicks, color: ticksColor }"
+        [minorTicks]="{ visible: showTicks, color: ticksColor }" [reverse]="reverse" [startAngle]="startAngle"
+        [endAngle]="endAngle" [rangePlaceholderColor]="rangePlaceholderColor" [rangeSize]="rangeSize">
+        <kendo-radialgauge-scale-labels format="c" [color]="labelsColor" [visible]="showLabels">
+        </kendo-radialgauge-scale-labels>
+        <kendo-radialgauge-scale-ranges>
+            <kendo-radialgauge-scale-range [from]="0" [to]="50" color="#ff6358">
+            </kendo-radialgauge-scale-range>
+        </kendo-radialgauge-scale-ranges>
+    </kendo-radialgauge-scale>
+</kendo-radialgauge> -->
+
+<!-- <kendo-radialgauge>
+    <kendo-radialgauge-pointers>
+        <kendo-radialgauge-pointer *ngFor="let pointer of pointers" [value]="pointer.value" [color]="pointer.color"
+            [length]="pointer.length">
+        </kendo-radialgauge-pointer>
+    </kendo-radialgauge-pointers>
+</kendo-radialgauge> -->
+
+<!-- <kendo-radialgauge [pointer]="{ value: value }">
+    <kendo-radialgauge-scale [minorUnit]="5" [majorUnit]="20" [max]="180">
+        <kendo-radialgauge-scale-ranges>
+            <kendo-radialgauge-scale-range [from]="80" [to]="120" color="#ffc700">
+            </kendo-radialgauge-scale-range>
+            <kendo-radialgauge-scale-range [from]="120" [to]="150" color="#ff7a00">
+            </kendo-radialgauge-scale-range>
+            <kendo-radialgauge-scale-range [from]="150" [to]="180" color="#c20000">
+            </kendo-radialgauge-scale-range>
+        </kendo-radialgauge-scale-ranges>
+    </kendo-radialgauge-scale>
+</kendo-radialgauge> -->
+
+<!-- <div class="example-config">
+    <kendo-label [for]="value" style=" position:absolute; padding-left: 80px; top:35px;" text="Value"></kendo-label>
+    <kendo-slider id="value" [min]="0" [max]="50" [smallStep]="10" [(ngModel)]="value"></kendo-slider>
+</div>
+<div style="height: 200px;">
+    <kendo-radialgauge [pointer]="{ value: value }" [scale]="{ max: 50 }">
+    </kendo-radialgauge>
+</div> -->
+
+<!-- <div class="example-config">
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+            <input type="checkbox" [(ngModel)]="showLabels" kendoCheckBox />
+            <kendo-label text="Show Labels"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <input type="checkbox" [(ngModel)]="showTicks" kendoCheckBox />
+            <kendo-label text="Show Ticks"></kendo-label>
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+            <kendo-colorpicker [(value)]="ticksColor"></kendo-colorpicker>
+            <kendo-label text="Ticks Color:">{{ ticksColor }}</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <kendo-colorpicker [(value)]="labelsColor"></kendo-colorpicker>
+            <kendo-label text="Labels Color:">{{ labelsColor }}</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <kendo-numerictextbox [style.width.px]="180" [autoCorrect]="autoCorrect" [min]="1" [max]="30"
+                [(value)]="rangeSize">
+            </kendo-numerictextbox>
+            <kendo-label text="Range Size"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <kendo-numerictextbox [style.width.px]="180" [autoCorrect]="autoCorrect" [min]="1" [max]="30"
+                [(value)]="lineWidth">
+            </kendo-numerictextbox>
+            <kendo-label text="Line Width"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <kendo-colorpicker [(value)]="rangeColor"></kendo-colorpicker>
+            <kendo-label text="Range Color:">{{ rangeColor }}</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <kendo-colorpicker [(value)]="lineColor"></kendo-colorpicker>
+            <kendo-label text="Line Color:">{{ lineColor }}</kendo-label>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="0" [max]="100" [smallStep]="1" [(ngModel)]="value">
+            </kendo-slider>
+            <kendo-label text="Value" style="position: absolute; top: 5px;">({{ value }})</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <input type="checkbox" [(ngModel)]="vertical" kendoCheckBox />
+            <kendo-label text="Vertical"></kendo-label>
+            <input type="checkbox" [(ngModel)]="reverse" kendoCheckBox />
+            <kendo-label text="Reverse"></kendo-label>
+        </div>
+    </div>
+</div>
+<kendo-lineargauge [pointer]="[{ value: value }]" [transitions]="false" style="display:block;">
+    <kendo-lineargauge-scale [majorTicks]="{ visible: showTicks, color: ticksColor }"
+        [minorTicks]="{ visible: showTicks, color: ticksColor }" [reverse]="reverse" [vertical]="vertical"
+        [line]="{ width: lineWidth, color: lineColor }" [rangeSize]="rangeSize">
+        <kendo-lineargauge-scale-labels format="c" [color]="labelsColor" [visible]="showLabels">
+        </kendo-lineargauge-scale-labels>
+        <kendo-lineargauge-scale-ranges>
+            <kendo-lineargauge-scale-range [from]="0" [to]="40" [color]="rangeColor">
+            </kendo-lineargauge-scale-range>
+        </kendo-lineargauge-scale-ranges>
+    </kendo-lineargauge-scale>
+</kendo-lineargauge> -->
+
+<!-- <div class="row">
+    <div class="col-sm-12 col-md-6">
+        <kendo-lineargauge [pointer]="{ value: value }" [scale]="{ vertical: false }">
+        </kendo-lineargauge>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <kendo-lineargauge [pointer]="{ value: value }" [scale]="{ vertical: true }">
+        </kendo-lineargauge>
+    </div>
+</div> -->
+
+<!-- <kendo-lineargauge>
+    <kendo-lineargauge-pointers>
+        <kendo-lineargauge-pointer *ngFor="let pointer of pointers" [value]="pointer.value" [color]="pointer.color"
+            shape="arrow">
+        </kendo-lineargauge-pointer>
+    </kendo-lineargauge-pointers>
+</kendo-lineargauge> -->
+
+<!-- <kendo-lineargauge [pointer]="{ value: value, shape: 'arrow' }">
+    <kendo-lineargauge-scale [minorUnit]="5" [majorUnit]="20" [max]="180">
+        <kendo-lineargauge-scale-ranges>
+            <kendo-lineargauge-scale-range [from]="80" [to]="120" color="#ffc700">
+            </kendo-lineargauge-scale-range>
+            <kendo-lineargauge-scale-range [from]="120" [to]="150" color="#ff7a00">
+            </kendo-lineargauge-scale-range>
+            <kendo-lineargauge-scale-range [from]="150" [to]="180" color="#c20000">
+            </kendo-lineargauge-scale-range>
+        </kendo-lineargauge-scale-ranges>
+    </kendo-lineargauge-scale>
+</kendo-lineargauge> -->
+
+<!-- <div class="example-config">
+    <kendo-label [for]="value" style=" position:absolute; padding-left: 80px; top:35px;" text="Value"></kendo-label>
+    <kendo-slider id="value" [min]="0" [max]="50" [smallStep]="10" [(ngModel)]="value"></kendo-slider>
+</div>
+<div style="height: 200px;">
+    <kendo-lineargauge [pointer]="{ value: value }" [scale]="{ max: 50 }">
+    </kendo-lineargauge>
+</div> -->
+
+<!-- <div class="example-config">
+    <kendo-label style=" position:absolute; padding-left: 80px; top:35px;" [for]="value" text="Value"></kendo-label>
+    <kendo-slider id="value" [min]="0" [max]="100" [smallStep]="10" [(ngModel)]="value"></kendo-slider>
+</div>
+<kendo-circulargauge [value]="value" [colors]="colors">
+    <ng-template kendoCircularGaugeCenterTemplate let-value="value" let-color="color">
+        <span [style.color]="color">{{ value }}%</span>
+    </ng-template>
+</kendo-circulargauge> -->
+<!-- <div class="example-config">
+    <kendo-label [for]="value" style=" position:absolute; padding-left: 80px; top:35px;" text="Value"></kendo-label>
+    <kendo-slider id="value" [min]="0" [max]="100" [smallStep]="10" [(ngModel)]="value"></kendo-slider>
+</div>
+<kendo-circulargauge [value]="value" [scale]="{ max: 100 }">
+    <ng-template kendoCircularGaugeCenterTemplate let-value="value">
+        {{ value }}%
+    </ng-template>
+</kendo-circulargauge> -->
+
+<!-- <div class="example-config">
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+            <input type="checkbox" [(ngModel)]="showLabels" kendoCheckBox />
+            <kendo-label text="Show Labels"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <input type="checkbox" [(ngModel)]="showTicks" kendoCheckBox />
+            <kendo-label text="Show Ticks"></kendo-label>
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+            <kendo-colorpicker [(value)]="ticksColor"></kendo-colorpicker>
+            <kendo-label text="Ticks Color:">{{ ticksColor }}</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <kendo-colorpicker [(value)]="labelsColor"></kendo-colorpicker>
+            <kendo-label text="Labels Color:">{{ labelsColor }}</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <kendo-numerictextbox [style.width.px]="180" [autoCorrect]="autoCorrect" [min]="1" [max]="30"
+                [(value)]="rangeSize">
+            </kendo-numerictextbox>
+            <kendo-label text="Range Size"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <kendo-combobox [style.width.px]="180" [(ngModel)]="rangeLineCap" [data]="listItems">
+            </kendo-combobox>
+            <kendo-label text="Range Line Cap"></kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <kendo-colorpicker [(value)]="rangePlaceholderColor"></kendo-colorpicker>
+            <kendo-label text="Range Placeholder Color:">{{
+                rangePlaceholderColor
+                }}</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="-90" [max]="90" [smallStep]="1" [(ngModel)]="startAngle">
+            </kendo-slider>
+            <kendo-label text="Start Angle" style="position: absolute; top: 5px;">({{ startAngle }})</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="90" [max]="270" [smallStep]="1" [(ngModel)]="endAngle">
+            </kendo-slider>
+            <kendo-label text="End Angle" style="position: absolute; top: 5px;">({{ endAngle }})</kendo-label>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <kendo-slider [tickPlacement]="'none'" [min]="0" [max]="100" [smallStep]="1" [(ngModel)]="value">
+            </kendo-slider>
+            <kendo-label text="Value" style="position: absolute; top: 5px;">({{ value }})</kendo-label>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <input type="checkbox" [(ngModel)]="reverse" kendoCheckBox />
+            <kendo-label text="Reverse"></kendo-label>
+        </div>
+    </div>
+</div>
+<kendo-arcgauge [value]="value" [transitions]="false" style="display:block;height:250px;">
+    <kendo-arcgauge-scale [majorTicks]="{ visible: showTicks, color: ticksColor }"
+        [minorTicks]="{ visible: showTicks, color: ticksColor }" [reverse]="reverse" [startAngle]="startAngle"
+        [endAngle]="endAngle" [rangePlaceholderColor]="rangePlaceholderColor" [rangeSize]="rangeSize"
+        [rangeLineCap]="rangeLineCap">
+        <kendo-arcgauge-scale-labels format="c" [color]="labelsColor" [visible]="showLabels">
+        </kendo-arcgauge-scale-labels>
+    </kendo-arcgauge-scale>
+</kendo-arcgauge> -->
+
+<!-- <div class="example-config">
+    <kendo-label style=" position:absolute; padding-left: 80px; top:35px;" [for]="value" text="Value"></kendo-label>
+    <kendo-slider id="value" [min]="0" [max]="100" [smallStep]="10" [(ngModel)]="value"></kendo-slider>
+</div>
+<kendo-arcgauge [value]="value" [colors]="colors">
+    <ng-template kendoArcGaugeCenterTemplate let-value="value" let-color="color">
+        <span [style.color]="color">{{ value }}%</span>
+    </ng-template>
+</kendo-arcgauge> -->
+
+<!-- <div class="example-config">
+    <kendo-label style=" position:absolute; padding-left: 80px; top:35px;" [for]="value" text="Value"></kendo-label>
+    <kendo-slider id="value" [min]="0" [max]="50" [smallStep]="10" [(ngModel)]="value"></kendo-slider>
+</div>
+<div style="height: 200px;">
+    <kendo-arcgauge [value]="value" [scale]="{ max: 50 }"> </kendo-arcgauge>
+</div> -->
+
+<!-- <kendo-arcgauge [value]="value"> </kendo-arcgauge> -->
+
+<!-- <div class="row">
+    <div class="col-sm-12 col-md-2">
+        <kendo-lineargauge [pointer]="{ value: value }"> </kendo-lineargauge>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <kendo-radialgauge [pointer]="{ value: value }"> </kendo-radialgauge>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <kendo-circulargauge [value]="value">
+            <ng-template kendoCircularGaugeCenterTemplate let-value="value">
+                {{ value }}
+            </ng-template>
+        </kendo-circulargauge>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <kendo-arcgauge [value]="value">
+            <ng-template kendoArcGaugeCenterTemplate let-value="value">
+                {{ value }}
+            </ng-template>
+        </kendo-arcgauge>
+    </div>
+</div> -->

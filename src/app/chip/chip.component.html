@@ -1,0 +1,201 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+
+<!-- START - CHIP EVENTS -->
+<p>
+    <kendo-chip label="My Chip" [removable]="true" (contentClick)="onContentClickCe()" (focus)="onFocusCe()"
+        (blur)="onBlurCe()" (remove)="onRemoveCe()">
+    </kendo-chip>
+</p>
+<event-log title="Event log" [events]="eventsCe"></event-log>
+<!-- END - CHIP EVENTS -->
+
+<hr />
+
+<!-- START - DISPLAYING AVATARS  -->
+<kendo-chip class="custom-style" *ngFor="let chip of chipsavatars" [label]="chip.labelav" [iconClass]="chip.iconClassav"
+    [icon]='chip.url'>
+</kendo-chip>
+<!-- END - DISPLAYING AVATARS  -->
+
+<hr />
+
+<!-- START - CUSTOM REMOVE ICONS -->
+<kendo-chip *ngFor="let chip of chipsIcon" [label]="chip.label" [selected]="chip.selected" [removable]="chip.removable"
+    [removeIcon]="chip.removeIcon" (remove)="onRemoveIcon($event)">
+</kendo-chip>
+<!-- END - CUSTOM REMOVE ICONS -->
+
+<hr />
+
+<!-- START ACTION CHIPS -->
+<kendo-card orientation="horizontal" [width]="'390px'">
+    <img kendoCardMedia
+        src="https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/coffee_first.jpg" />
+    <div>
+        <kendo-card-header>
+            <h1 kendoCardTitle>Welcome Home</h1>
+            <div kendoCardSubtitle>
+                <span class="reviews"> Friday, 7:30PM, Mostly Sunny </span>
+                <img style="width: 20px;"
+                    src="https://www.telerik.com/kendo-angular-ui-develop/components/layout/assets/tabstrip/sunny.png" />
+                <span>23ºC</span>
+            </div>
+        </kendo-card-header>
+        <kendo-card-body>
+            <kendo-chip-list selection="multiple">
+                <kendo-chip *ngFor="let action of chipActions" [label]="action.label"
+                    (contentClick)="onChipClick(action)">
+                </kendo-chip>
+            </kendo-chip-list>
+        </kendo-card-body>
+    </div>
+</kendo-card>
+<!-- END ACTION CHIPS -->
+
+<!-- start FILTER CHIPS -->
+<!-- <kendo-grid [data]="gridData" [height]="300" [filter]="state.filter">
+    <ng-template kendoGridToolbarTemplate>
+        <kendo-chip-list selection="multiple" (selectedChange)="selectedChange($event)">
+            <kendo-chip *ngFor="let chip of filterchips" [label]="chip.label" [icon]="chip.icon">
+            </kendo-chip>
+        </kendo-chip-list>
+    </ng-template>
+    <kendo-grid-column field="ProductID" title="ID" width="40">
+    </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Product Name" width="100">
+    </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category" width="150">
+    </kendo-grid-column>
+</kendo-grid> -->
+<!-- end FILTER CHIPS -->
+
+<hr />
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Single selection</p>
+
+        <kendo-chip-list selection="single">
+            <kendo-chip *ngFor="let chip of singleSelection" [label]="chip.label" [icon]="chip.icon"
+                [selected]="chip.selected">
+            </kendo-chip>
+        </kendo-chip-list>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Multiple selection</p>
+
+        <kendo-chip-list selection="multiple">
+            <kendo-chip *ngFor="let chip of multipleSelection" [label]="chip.label" [icon]="chip.icon"
+                [selected]="chip.selected">
+            </kendo-chip>
+        </kendo-chip-list>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>None</p>
+
+        <kendo-chip-list selection="none">
+            <kendo-chip *ngFor="let chip of multipleSelection" [label]="chip.label" [icon]="chip.icon">
+            </kendo-chip>
+        </kendo-chip-list>
+    </div>
+</div>
+
+
+<hr />
+
+<kendo-chip *ngFor="let contact of selectedContactsUc" [label]="contact.label" [removable]="true"
+    (remove)="onRemoveUc($event)">
+</kendo-chip>
+
+<kendo-autocomplete #contactslistuc [data]="contactsuc" class="contacts" valueField="label"
+    [kendoDropDownFilter]="{ operator: 'contains' }" [filterable]="true" placeholder="To: Email Adress*"
+    (valueChange)="valueChangeUc($event)">
+</kendo-autocomplete>
+
+<hr />
+
+<kendo-chip *ngFor="let contact of selectedContactsAC" [label]="contact.label" [removable]="true"
+    (remove)="onRemove2($event)">
+</kendo-chip>
+
+<kendo-autocomplete #contactslist1 [data]="contacts1" class="contacts" valueField="label"
+    [kendoDropDownFilter]="{ operator: 'contains' }" [filterable]="true" placeholder="To: Email Adress*"
+    (valueChange)="valueChange1($event)">
+</kendo-autocomplete>
+
+<hr />
+
+<p>Custom Content</p>
+
+<kendo-chip *ngFor="let chip of chipsTime" [removable]="chip.removable" (remove)="onRemoveTime($event)">
+    <span class="custom-content">{{ chip.label }}</span>
+</kendo-chip>
+
+<hr />
+
+<p>Passing a String</p>
+
+<kendo-chip *ngFor="let chip of chips" [label]="chip.label" [removable]="chip.removable" (remove)="onRemoveCS($event)">
+</kendo-chip>
+
+<hr />
+
+<div class="example">
+    <kendo-chip themeColor="base">Base</kendo-chip>
+    <kendo-chip themeColor="info">Info</kendo-chip>
+    <kendo-chip themeColor="success">Success</kendo-chip>
+    <kendo-chip themeColor="warning">Warning</kendo-chip>
+    <kendo-chip themeColor="error">Error</kendo-chip>
+</div>
+
+<hr />
+
+<div class="example">
+    <kendo-chip rounded="none" icon="globe-outline">No Roundness</kendo-chip>
+    <kendo-chip rounded="small" icon="globe-outline">Small</kendo-chip>
+    <kendo-chip rounded="medium" icon="globe-outline">Medium</kendo-chip>
+    <kendo-chip rounded="large" icon="globe-outline">Large</kendo-chip>
+    <kendo-chip rounded="full" icon="globe-outline">Full</kendo-chip>
+    <kendo-chip rounded="none" icon="globe-outline" class="custom-rounded">Custom</kendo-chip>
+</div>
+
+<hr />
+
+<div class="example">
+    <kendo-chip size="small" icon="marker-pin-target">Small</kendo-chip>
+    <kendo-chip size="medium" icon="marker-pin-target">Medium</kendo-chip>
+    <kendo-chip size="large" icon="marker-pin-target">Large</kendo-chip>
+    <kendo-chip size="none" icon="marker-pin-target" class="custom-size">Custom</kendo-chip>
+</div>
+
+<hr />
+<app-configurator [options]="options" (optionChange)="changeHandler($event)">
+</app-configurator>
+
+<div class="example-config">
+    <kendo-chip [size]="size" [rounded]="rounded" [fillMode]="fillMode" [themeColor]="themeColor" [removable]="true">
+        User Settings
+    </kendo-chip>
+</div>
+
+<hr />
+<div class="k-block">
+    <kendo-chip *ngFor="let contact of selectedContacts" [label]="contact.label" [removable]="true"
+        [iconClass]="contact.iconClass" (remove)="onRemove($event)">
+    </kendo-chip>
+    <div class="example">
+        <kendo-autocomplete #contactslist [data]="contacts" class="contacts" valueField="label"
+            [kendoDropDownFilter]="{ operator: 'contains' }" [filterable]="true" placeholder="To: Email Adress*"
+            (valueChange)="valueChange($event)">
+        </kendo-autocomplete>
+        <textarea class="k-textarea k-input">
+Hi there! Don’t miss out our dinner party!</textarea>
+    </div>
+</div>
+<hr />

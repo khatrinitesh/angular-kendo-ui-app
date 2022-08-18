@@ -1,0 +1,17 @@
+ .example-wrap kendo-floatingactionbutton,
+      .example-wrap kendo-popup {
+        z-index: 10003;
+      }
+      .example-wrap {
+        position: relative;
+        height: 250px;
+        border-color: rgba(0, 0, 0, 0.08);
+        color: #656565;
+        background-color: #ffffff;
+      }
+      .k-overlay {
+        position: absolute;
+      }
+      .content {
+        padding: 18px;
+      }

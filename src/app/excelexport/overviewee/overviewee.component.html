@@ -1,0 +1,112 @@
+<!-- GLOBALIZATION -->
+<button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+
+<kendo-excelexport [data]="data" fileName="Products.xlsx" #excelexport>
+    <kendo-excelexport-column field="ProductID" title="Product ID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName" title="Product Name">
+    </kendo-excelexport-column>
+</kendo-excelexport>
+
+<!-- SAVING FILES ON THE SERVER -->
+<!-- <button type="button" (click)="save(excelexport)">Save</button>
+<kendo-excelexport [data]="data" [fileName]="fileName" #excelexport>
+    <kendo-excelexport-column field="ProductID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName">
+    </kendo-excelexport-column>
+</kendo-excelexport> -->
+
+<!-- FILTERING -->
+<!-- <button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+
+<kendo-excelexport [data]="data" fileName="Products.xlsx" [filterable]="true" #excelexport>
+    <kendo-excelexport-column field="ProductID" title="Product ID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName" title="Product Name">
+    </kendo-excelexport-column>
+</kendo-excelexport> -->
+
+<!-- createing new custom workbooks -->
+<!-- <button kendoButton type="button" (click)="exportNewWorkbook()">
+    Export Custom Workbook To Excel
+</button> -->
+
+
+<!-- GROUP HEADER COLUMN TEMPLATE -->
+<!-- <button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+<kendo-excelexport [data]="data" [group]="group" fileName="Products.xlsx" #excelexport>
+    <kendo-excelexport-column field="ProductID" title="Product ID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName" title="Product Name">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="UnitPrice" title="Price" [width]="200">
+        <ng-template kendoExcelExportGroupHeaderColumnTemplate let-aggregates="aggregates">
+            {{ aggregates.UnitPrice.sum }}
+        </ng-template>
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="Category.CategoryName" [hidden]="true">
+        <ng-template kendoExcelExportGroupHeaderTemplate let-value="value">
+            Category: {{ value }}
+        </ng-template>
+    </kendo-excelexport-column>
+</kendo-excelexport> -->
+
+<!-- GROUP HEADER TEMPLATE -->
+<!-- <button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+
+<kendo-excelexport [data]="data" [group]="group" fileName="Products.xlsx" #excelexport>
+    <kendo-excelexport-column field="ProductID" title="Product ID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName" title="Product Name" [width]="350">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="Category.CategoryName" [hidden]="true">
+        <ng-template kendoExcelExportGroupHeaderTemplate let-value="value">
+            Category: {{ value }}
+        </ng-template>
+    </kendo-excelexport-column>
+</kendo-excelexport> -->
+
+<!-- LOCKED STATE -->
+<!-- <button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+
+<kendo-excelexport [data]="data" fileName="Products.xlsx" #excelexport>
+    <kendo-excelexport-column *ngFor="let field of fields" [field]="field" [locked]="field === 'ProductID'"
+        [width]="200">
+    </kendo-excelexport-column>
+</kendo-excelexport> -->
+
+<!-- HIDDEN STATE -->
+<!-- <button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+
+<kendo-excelexport [data]="data" [group]="group" fileName="Products.xlsx" #excelexport>
+    <kendo-excelexport-column field="ProductID" title="Product ID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName" title="Product Name" [width]="350">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="Category.CategoryName" title="Category" [hidden]="false">
+    </kendo-excelexport-column>
+</kendo-excelexport> -->
+
+<!-- <button kendoButton type="button" (click)="excelexport.save()">
+    Export To Excel
+</button>
+
+<kendo-excelexport [data]="data" fileName="Products.xlsx" #excelexport>
+    <kendo-excelexport-column field="ProductID" title="Product ID">
+    </kendo-excelexport-column>
+    <kendo-excelexport-column field="ProductName" title="Product Name">
+    </kendo-excelexport-column>
+</kendo-excelexport> -->

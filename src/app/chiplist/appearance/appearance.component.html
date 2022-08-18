@@ -1,0 +1,40 @@
+<h4>CHIPLIST - APPEARANCE</h4>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Small</p>
+        <kendo-chiplist size="small">
+            <kendo-chip *ngFor="let item of items" [label]="item.label">
+            </kendo-chip>
+        </kendo-chiplist>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Medium</p>
+        <kendo-chiplist size="medium">
+            <kendo-chip *ngFor="let item of items" [label]="item.label">
+            </kendo-chip>
+        </kendo-chiplist>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Large</p>
+        <kendo-chiplist size="large">
+            <kendo-chip *ngFor="let item of items" [label]="item.label">
+            </kendo-chip>
+        </kendo-chiplist>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Custom</p>
+        <kendo-chiplist size="none" class="custom-size">
+            <kendo-chip *ngFor="let item of items" [label]="item.label">
+            </kendo-chip>
+        </kendo-chiplist>
+    </div>
+</div>

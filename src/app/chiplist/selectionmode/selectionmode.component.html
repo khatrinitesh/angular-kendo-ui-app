@@ -1,0 +1,19 @@
+<h4>CHIPLILST - SELECTMODE</h4>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Single selection</p>
+
+        <kendo-chiplist selection="single">
+            <kendo-chip *ngFor="let chip of chips" [label]="chip.label" [selected]="chip.selected">
+            </kendo-chip>
+        </kendo-chiplist>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>No selection</p>
+
+        <kendo-chiplist>
+            <kendo-chip *ngFor="let chip of chips" [label]="chip.label">
+            </kendo-chip>
+        </kendo-chiplist>
+    </div>
+</div>

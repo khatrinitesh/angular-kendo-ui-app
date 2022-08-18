@@ -1,0 +1,23 @@
+.example-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      
+      .kendoka {
+        margin: 0 auto;
+        width: 350px;
+        height: 350px;
+        background-size: cover;
+        background-image: url("https://www.telerik.com/kendo-angular-ui-develop/components/inputs/colorpicker/assets/kendoka.png");
+      }
+
+      .text-wrapper {
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 10px;
+      }

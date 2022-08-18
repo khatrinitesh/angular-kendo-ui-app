@@ -1,0 +1,8 @@
+<div class="example-config">
+    <h5>{{ title }}</h5>
+    <ul class="event-log">
+        <li *ngFor="let event of eventsCe; let i = index">
+            {{ logEventsCe(event, i) }}
+        </li>
+    </ul>
+</div>

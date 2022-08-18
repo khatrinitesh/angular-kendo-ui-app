@@ -1,0 +1,33 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+<div class="example">
+    <form class="k-form" [formGroup]="form">
+        <kendo-formfield>
+            <kendo-label [for]="price" text="Price Range"></kendo-label>
+            <kendo-rangeslider #price formControlName="price" [min]="0" [max]="600" [largeStep]="2" [smallStep]="50">
+            </kendo-rangeslider>
+            <kendo-formhint>Choose a price range</kendo-formhint>
+            <kendo-formerror>Only ranges between 200 and 500 are allowed</kendo-formerror>
+        </kendo-formfield>
+    </form>
+</div>
+<!-- <form #form="ngForm">
+    <div class="example-config">
+        <strong>Value: {{ value | json }}</strong>
+    </div>
+    <p>Select value:</p>
+    <kendo-rangeslider name="slider" [min]="0" [max]="10" [largeStep]="2" [(ngModel)]="value">
+    </kendo-rangeslider>
+</form> -->
+<!-- <div>
+    <label>toggle orientation
+        <input type="checkbox" KendoCheckBox [(ngModel)]="vertical" />
+    </label>
+    <kendo-rangeslider [vertical]="vertical" [min]="min" [max]="max" [largeStep]="largeStep" [ngModel]="value">
+
+    </kendo-rangeslider>
+</div> -->
+<!-- <p>Choose a price range</p>
+<kendo-rangeslider [(ngModel)]="value" [min]="min" [max]="max" [smallStep]="smallStep" [largeStep]="largeStep">
+</kendo-rangeslider>
+<p style="margin-top:20px;">Selected Range: {{value[0]}} - {{value[1]}}</p> -->

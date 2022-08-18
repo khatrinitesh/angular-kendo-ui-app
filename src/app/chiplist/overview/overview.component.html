@@ -1,0 +1,16 @@
+<h4>CHIPLIST - OVERVIEW</h4>
+Order meal:
+<kendo-buttongroup class="meals" selection="single">
+    <button kendoButton *ngFor="let meal of meals" [toggleable]="true" [selected]="meal.selected"
+        (click)="selectedMeal(meal)">
+        <div class="meal-icon">{{ meal.icon }}</div>
+        {{ meal.name }}
+    </button>
+</kendo-buttongroup>
+<div class="separator">
+    <kendo-chiplist selection="multiple">
+        <div>Add more:</div>
+        <kendo-chip *ngFor="let addition of additions" [label]="addition.label">
+        </kendo-chip>
+    </kendo-chiplist>
+</div>

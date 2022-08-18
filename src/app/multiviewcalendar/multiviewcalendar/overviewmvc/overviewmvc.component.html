@@ -1,0 +1,29 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+<kendo-multiviewcalendar [disabledDates]="disabledDates"></kendo-multiviewcalendar>
+<hr />
+<div class="example-config">
+    <label>
+        Start: <kendo-dateinput [(value)]="range.start"></kendo-dateinput>
+    </label>
+    <label>
+        End: <kendo-dateinput [(value)]="range.end"></kendo-dateinput>
+    </label>
+</div>
+<kendo-multiviewcalendar [selectionRange]="range" [focusedDate]="range.start || range.end"></kendo-multiviewcalendar>
+<hr />
+<div class="example-config">
+    Selected date is {{ value | kendoDate: "MMMM yyyy" }}
+</div>
+<kendo-multiviewcalendar activeView="decade" [(value)]="value"></kendo-multiviewcalendar>
+<hr />
+<div class="example-config">
+    <label>
+        Number of rendered views:
+        <kendo-numerictextbox [(ngModel)]="views" [spinners]="true" [min]="1" [max]="5" format="n0"
+            [autoCorrect]="true"></kendo-numerictextbox>
+    </label>
+</div>
+<div class="scrollbar-container">
+    <kendo-multiviewcalendar [views]="views"></kendo-multiviewcalendar>
+</div>

@@ -1,0 +1,152 @@
+<!-- in cell -->
+<kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks" kendoGanttExpandable
+    [initiallyExpanded]="true" [dependencies]="dependencies" (cellDblClick)="handleCellDblClick($event)"
+    (cellClose)="handleCellClose($event)">
+    <kendo-gantt-column field="title" title="Title" [expandable]="true" [width]="200"></kendo-gantt-column>
+    <kendo-gantt-column field="start" title="Start" [format]="dateTimeFormat" [width]="200">
+        <ng-template kendoGanttEditTemplate let-formGroup="formGroup" let-column="column">
+            <kendo-datetimepicker [format]="dateTimeFormat" [formControl]="formGroup.get(column.field)">
+            </kendo-datetimepicker>
+        </ng-template>
+    </kendo-gantt-column>
+    <kendo-gantt-column field="end" title="End" [format]="dateTimeFormat" [width]="200">
+        <ng-template kendoGanttEditTemplate let-formGroup="formGroup" let-column="column">
+            <kendo-datetimepicker [format]="dateTimeFormat" [formControl]="formGroup.get(column.field)">
+            </kendo-datetimepicker>
+        </ng-template>
+    </kendo-gantt-column>
+    <kendo-gantt-column field="completionRatio" title="Progress" format="p" [width]="200" editor="numeric">
+    </kendo-gantt-column>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+</kendo-gantt>
+
+<!-- multi column -->
+<!-- <kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks"
+    [dependencies]="dependencies">
+    <kendo-gantt-column field="title" title="Task" [width]="200">
+    </kendo-gantt-column>
+    <kendo-gantt-column-group title="Estimate">
+        <kendo-gantt-column field="start" title="Start" [width]="200" format="dd-MMM-yyyy"></kendo-gantt-column>
+        <kendo-gantt-column field="end" title="End" [width]="200" format="dd-MMM-yyyy"></kendo-gantt-column>
+    </kendo-gantt-column-group>
+    <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt> -->
+
+<!-- <kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks"
+    [dependencies]="dependencies">
+    <kendo-gantt-column field="title" title="Title" [expandable]="true" [width]="200">
+        <ng-template kendoGanttCellTemplate let-dataItem>
+            (id: {{ dataItem.id }}) {{ dataItem.title }}
+        </ng-template>
+    </kendo-gantt-column>
+    <kendo-gantt-column field="start" title="Start" format="dd-MMM-yyyy" [width]="120"></kendo-gantt-column>
+    <kendo-gantt-column field="end" title="End" format="dd-MMM-yyyy" [width]="120"></kendo-gantt-column>
+    <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt> -->
+
+<!-- <kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks"
+    [dependencies]="dependencies">
+    <kendo-gantt-column field="title" title="Title" [expandable]="true" [width]="200">
+        <ng-template kendoGanttCellTemplate let-dataItem>
+            (id: {{ dataItem.id }}) {{ dataItem.title }}
+        </ng-template>
+    </kendo-gantt-column>
+    <kendo-gantt-column field="start" title="Start" format="dd-MMM-yyyy" [width]="120"></kendo-gantt-column>
+    <kendo-gantt-column field="end" title="End" format="dd-MMM-yyyy" [width]="120"></kendo-gantt-column>
+    <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt> -->
+
+<!-- <kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks"
+    [dependencies]="dependencies">
+    <kendo-gantt-column field="title" title="Title" [expandable]="true" [width]="200">
+        <ng-template kendoGanttHeaderTemplate let-column="column">
+            {{ column.title }} header template
+        </ng-template>
+    </kendo-gantt-column>
+    <kendo-gantt-column field="start" title="Start" format="dd-MMM-yyyy" [width]="120"></kendo-gantt-column>
+    <kendo-gantt-column field="end" title="End" format="dd-MMM-yyyy" [width]="120"></kendo-gantt-column>
+    <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt> -->
+
+<!-- <kendo-gantt
+      [style.height.px]="500"
+      [kendoGanttHierarchyBinding]="data"
+      childrenField="subtasks"
+      [dependencies]="dependencies"
+    >
+      <kendo-gantt-column
+        field="title"
+        title="Title"
+        [expandable]="true"
+        [width]="200"
+      ></kendo-gantt-column>
+      <kendo-gantt-span-column>
+        <kendo-gantt-column
+          field="start"
+          title="Start"
+          format="dd-MMM-yyyy"
+          [width]="200"
+        ></kendo-gantt-column>
+        <kendo-gantt-column
+          field="end"
+          title="End"
+          format="dd-MMM-yyyy"
+          [width]="200"
+        >
+        </kendo-gantt-column>
+        <ng-template kendoGanttCellTemplate let-dataItem>
+          <h6 style="display: inline;">
+            Task range: {{ dataItem.start | date }}
+            {{ dataItem.end | date }}
+          </h6>
+        </ng-template>
+      </kendo-gantt-span-column>
+      <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+      <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+      <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+    </kendo-gantt> -->
+
+<!-- <div class="example-config">
+    <button (click)="restoreColumns()" class="k-button">
+        Restore hidden columns
+    </button>
+</div>
+<kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks"
+    [dependencies]="dependencies">
+    <kendo-gantt-column *ngFor="let col of columns; let index = index" [field]="col"
+        [hidden]="hiddenColumns.indexOf(col) > -1" [expandable]="index === 0" [width]="200">
+        <ng-template kendoGanttHeaderTemplate let-column="column">
+            {{ column.field }}
+            <button (click)="hideColumn(column.field)" class="k-button k-primary k-float-right">
+                Hide
+            </button>
+        </ng-template>
+    </kendo-gantt-column>
+    <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt> -->
+
+<!-- <kendo-gantt [style.height.px]="500" [kendoGanttHierarchyBinding]="data" childrenField="subtasks" kendoGanttExpandable
+    [initiallyExpanded]="true" [dependencies]="dependencies" [filterable]="true" [sortable]="true" [columnMenu]="true"
+    [columnsResizable]="true" [columnsReorderable]="true">
+    <kendo-gantt-column field="title" title="Task" [width]="200" [expandable]="true">
+    </kendo-gantt-column>
+    <kendo-gantt-column-group title="Estimation">
+        <kendo-gantt-column field="start" title="Start" format="dd-MMM-yyyy" [width]="120" filter="date">
+        </kendo-gantt-column>
+        <kendo-gantt-column field="end" title="End" format="dd-MMM-yyyy" [width]="120" filter="date">
+        </kendo-gantt-column>
+    </kendo-gantt-column-group>
+    <kendo-gantt-timeline-day-view></kendo-gantt-timeline-day-view>
+    <kendo-gantt-timeline-week-view></kendo-gantt-timeline-week-view>
+    <kendo-gantt-timeline-month-view></kendo-gantt-timeline-month-view>
+</kendo-gantt> -->

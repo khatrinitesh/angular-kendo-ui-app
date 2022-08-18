@@ -1,0 +1,58 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+<kendo-floatinglabel text="Enter date">
+    <kendo-datepicker [(ngModel)]="date" placeholder="" name="date" [style.width.px]="170">
+    </kendo-datepicker>
+</kendo-floatinglabel>
+<kendo-floatinglabel text="Enter date">
+    <kendo-dateinput [(ngModel)]="date" placeholder="" name="date" [style.width.px]="170">
+    </kendo-dateinput>
+</kendo-floatinglabel>
+<kendo-floatinglabel text="Enter date">
+    <kendo-datetimepicker [(ngModel)]="date" placeholder="" name="date" [style.width.px]="170">
+    </kendo-datetimepicker>
+</kendo-floatinglabel>
+
+<div class="wrapper">
+    <kendo-floatinglabel text="Enter Age">
+        <kendo-numerictextbox [(ngModel)]="age2" name="age2" [style.width.px]="180">
+        </kendo-numerictextbox>
+    </kendo-floatinglabel>
+    <kendo-floatinglabel text="Enter Phone Number">
+        <kendo-maskedtextbox [mask]="mask" [maskOnFocus]="true" [(ngModel)]="maskedText" name="maskedText"
+            [style.width.px]="180">
+        </kendo-maskedtextbox>
+    </kendo-floatinglabel>
+</div>
+
+<kendo-floatinglabel text="Enter Age">
+    <kendo-numerictextbox [style.width.px]="180"></kendo-numerictextbox>
+</kendo-floatinglabel>
+
+<div class="example-config">
+    Click on the label text to focus the associated input.
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6 example-col">
+        <label [for]="datepicker">DatePicker: </label>
+        <kendo-datepicker #datepicker [style.width.px]="180"></kendo-datepicker>
+    </div>
+    <div class="col-xs-12 col-md-6 example-col">
+        <label [for]="textbox">TextBox: </label>
+        <kendo-textbox #textbox [style.width.px]="180"></kendo-textbox>
+    </div>
+</div>
+<div class="example-config">
+    Focus the inputs to trigger the floating label functionality
+</div>
+<kendo-floatinglabel text="Enter date">
+    <kendo-datepicker [(ngModel)]="date" placeholder="" name="date" [style.width.px]="180">
+    </kendo-datepicker>
+</kendo-floatinglabel>
+<kendo-floatinglabel text="Enter Age">
+    <kendo-numerictextbox [(ngModel)]="age" name="age" [style.width.px]="180"></kendo-numerictextbox>
+</kendo-floatinglabel>
+<kendo-floatinglabel text="Select value">
+    <kendo-dropdownlist [(ngModel)]="comboBoxValue" [data]="data" [style.width.px]="180">
+    </kendo-dropdownlist>
+</kendo-floatinglabel>

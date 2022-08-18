@@ -1,0 +1,138 @@
+<h4>FLOATING ACTION BUTTON - POSITIONING</h4>
+<div class="example-wrap">
+    <div>
+        <input kendoRadioButton type="radio" name="group" value="fixed" id="fixed" class="k-radio" checked
+            [(ngModel)]="positionMode" />
+        <label class="k-radio-label" for="fixed">Fixed</label>
+    </div>
+    <div>
+        <input kendoRadioButton type="radio" name="group" value="absolute" id="absolute" class="k-radio"
+            [(ngModel)]="positionMode" />
+        <label class="k-radio-label" for="absolute">Absolute</label>
+    </div>
+</div>
+<div class="mt-3 text">
+    <p>
+        National Parks protect some of our nation’s most beautiful and
+        remarkable landscapes. There’s no denying that National Parks are a
+        primary go to destination for millions of Americans. However, nearby
+        National Forests often go unnoticed by the millions of visitors driving
+        by on route to some of our nation’s best-known natural landmarks. These
+        surrounding National Forest landscapes can be just as grand. They
+        provide similar vistas, wildlife viewing, and camping options but lack
+        the crowds and expense that come with visiting a National Park. As
+        you're planning your next trip to a National Park - whether it's
+        Yellowstone, Shenandoah, Zion - keep these things in mind:
+    </p>
+
+    <ul>
+        <li>
+            Some National Parks require an entrance fee; many National Forest
+            recreation areas do not.
+        </li>
+        <li>
+            Camping in a National Park can be expensive and competitive.
+            Backcountry camping typically requires obtaining additional permits as
+            well. National Forest campgrounds are more economical, less crowded
+            and dispersed or backcountry camping is usually free.
+        </li>
+        <li>
+            Dogs must be leashed or restrained at all times in a National Park and
+            leashes cannot exceed six feet in length.
+        </li>
+        <li>
+            So, this summer be sure to make a stop at our National Parks and our
+            National Forests.
+        </li>
+        <li>
+            NFF Blog post: What are the differences between National Forests and
+            National Parks?
+        </li>
+    </ul>
+    <kendo-floatingactionbutton icon="arrow-chevron-up" text="Go to Top" [positionMode]="positionMode"
+        (click)="scrollToTop()">
+    </kendo-floatingactionbutton>
+</div>
+
+<h4>FLOATING ACTION BUTTON - ALIGNMENT</h4>
+<div class="example-wrap">
+    <kendo-floatingactionbutton icon="cart" [align]="topStart"></kendo-floatingactionbutton>
+    <kendo-floatingactionbutton icon="cart" [align]="topCenter"></kendo-floatingactionbutton>
+    <kendo-floatingactionbutton icon="cart" [align]="topEnd"></kendo-floatingactionbutton>
+
+    <kendo-floatingactionbutton icon="cart" [align]="middleStart"></kendo-floatingactionbutton>
+    <kendo-floatingactionbutton icon="cart" [align]="middleEnd"></kendo-floatingactionbutton>
+
+    <kendo-floatingactionbutton icon="cart" [align]="bottomStart"></kendo-floatingactionbutton>
+    <kendo-floatingactionbutton icon="cart" [align]="bottomCenter"></kendo-floatingactionbutton>
+    <kendo-floatingactionbutton icon="cart" [align]="bottomEnd"></kendo-floatingactionbutton>
+</div>
+
+<h4>FLOATING ACTION BUTTON - OFFSET</h4>
+<div class="example-wrap">
+    <div class="col-6">
+        <p>Horizontal Offset in px</p>
+        <kendo-numerictextbox [value]="xValue" (valueChange)="onXChange($event)"></kendo-numerictextbox>
+    </div>
+    <div class="col-6">
+        <p>Vertical Offset in px</p>
+        <kendo-numerictextbox [value]="yValue" (valueChange)="onYChange($event)"></kendo-numerictextbox>
+    </div>
+    <kendo-floatingactionbutton icon="plus" [offset]="offset"></kendo-floatingactionbutton>
+</div>
+
+<h4>FLOATING ACTION BUTTON - DIAL ITEMS</h4>
+<div class="example-wrap">
+    <kendo-floatingactionbutton icon="plus" [align]="{ horizontal: 'start', vertical: 'bottom' }"
+        [dialItems]="labelItems">
+    </kendo-floatingactionbutton>
+
+    <kendo-floatingactionbutton icon="share" text="Share" [align]="{ horizontal: 'center', vertical: 'bottom' }"
+        [dialItems]="actionItems">
+    </kendo-floatingactionbutton>
+
+    <kendo-floatingactionbutton icon="bell" [align]="{ horizontal: 'end', vertical: 'bottom' }"
+        [dialItems]="socialItems">
+    </kendo-floatingactionbutton>
+</div>
+
+<h4>FLOATING ACTION BUTTON - ANIMATION</h4>
+<div class="example-wrap">
+    <label><input kendoCheckBox type="checkbox" [(ngModel)]="enabled" />
+        Animate</label>
+    <label class="config-label">
+        Duration
+        <kendo-numerictextbox [(ngModel)]="duration" [disabled]="!enabled"></kendo-numerictextbox>
+    </label>
+    <label class="config-label">
+        Gap
+        <kendo-numerictextbox [(ngModel)]="gap" [disabled]="!enabled"></kendo-numerictextbox>
+    </label>
+
+    <kendo-floatingactionbutton icon="audio" [dialItems]="socialItems2"
+        [dialItemAnimation]="enabled ? { duration: duration, gap: gap } : false">
+    </kendo-floatingactionbutton>
+</div>
+
+<h4>FLOATING ACTION BUTTON - OVERLAY</h4>
+<div class="example-wrap k-card">
+    <div class="k-overlay" *ngIf="dialOpen"></div>
+    <div class="content">
+        Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper
+        dignissim. Sagittis purus sit amet volutpat consequat mauris. Urna nec
+        tincidunt praesent semper feugiat nibh. Leo in vitae turpis massa sed
+        elementum tempus egestas sed. Pellentesque eu tincidunt tortor aliquam
+        nulla facilisi cras. Massa tempor nec feugiat nisl pretium fusce id.
+        Vitae tempus quam pellentesque nec nam aliquam. Metus aliquam eleifend
+        mi in nulla posuere sollicitudin aliquam ultrices. Lectus urna duis
+        convallis convallis tellus id interdum velit. Quis commodo odio aenean
+        sed adipiscing diam donec adipiscing tristique. Netus et malesuada fames
+        ac turpis egestas sed. Vel pharetra vel turpis nunc eget. Bibendum est
+        ultricies integer quis. Convallis convallis tellus id interdum. Egestas
+        purus viverra accumsan in nisl nisi. Pretium nibh ipsum consequat nisl
+        vel pretium.
+    </div>
+    <kendo-floatingactionbutton [icon]="icon" [dialItems]="socialItems3" themeColor="tertiary" positionMode="absolute"
+        (open)="onDialOpen()" (close)="onDialClose()">
+    </kendo-floatingactionbutton>
+</div>

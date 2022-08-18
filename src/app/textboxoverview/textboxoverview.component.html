@@ -1,0 +1,126 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+<div class="example-wrapper">
+    <p>ColorGradient</p>
+    <kendo-colorgradient [style.width]="'40%'"></kendo-colorgradient>
+
+    <p>ColorPalette</p>
+    <kendo-colorpalette [style.width]="'350px'"></kendo-colorpalette>
+
+    <p>MaskedTextBox</p>
+    <kendo-maskedtextbox [style.width.px]="350" [(ngModel)]="maskedValue" mask="9-000"></kendo-maskedtextbox>
+
+    <p>NumericTextBox</p>
+    <kendo-numerictextbox [style.width.px]="350" [(ngModel)]="numericValue"></kendo-numerictextbox>
+
+    <p>Slider (value = {{ sliderValue }})</p>
+    <kendo-slider [style.width]="'50%'" [min]="min" [max]="max" [smallStep]="smallStep" [(ngModel)]="sliderValue">
+    </kendo-slider>
+
+    <p>TextBox</p>
+    <kendo-textbox [style.width.px]="400" placeholder="First Name">
+    </kendo-textbox>
+</div>
+
+<kendo-textbox [style.width.px]="200" [readonly]="true" [value]="readOnlyValue">
+    <ng-template kendoTextBoxPrefixTemplate>
+        <kendo-icon name="information"></kendo-icon>
+        <kendo-textbox-separator></kendo-textbox-separator>
+    </ng-template>
+</kendo-textbox>
+<kendo-textbox [style.width.px]="200" [value]="normalValue">
+    <ng-template kendoTextBoxPrefixTemplate>
+        <kendo-icon name="question"></kendo-icon>
+        <kendo-textbox-separator></kendo-textbox-separator>
+    </ng-template>
+</kendo-textbox>
+
+<div class="example-config">
+    <input type="checkbox" kendoCheckBox id="disabled" [(ngModel)]="isDisabled" />
+    <label class="k-checkbox-label" for="disabled">Disabled</label>
+</div>
+<kendo-textbox [style.width.px]="200" [disabled]="isDisabled" placeholder="Cardholder Name"></kendo-textbox>
+
+<div class="example-config">
+    <p>
+        Please, fill out both fields. Name should be at least three characters
+        long.
+    </p>
+    <p>Name: {{ form.controls.name.value }}</p>
+    <p>Surname: {{ form.controls.surname.value }}</p>
+</div>
+<form [formGroup]="form">
+    <kendo-textbox [style.width.px]="200" formControlName="name" placeholder="Enter Name" showSuccessIcon="initial"
+        showErrorIcon="initial"></kendo-textbox>
+    <kendo-textbox [style.width.px]="200" formControlName="surname" placeholder="Enter Surname"
+        showSuccessIcon="initial" showErrorIcon="initial"></kendo-textbox>
+</form>
+<hr />
+<div class="example-config">
+    <p>Name should be at least three letters long. 1</p>
+    <p>Name: {{ valuetwo }}</p>
+</div>
+<form #templateForm="ngForm">
+    <kendo-textbox [style.width.px]="200" name="name" [(ngModel)]="valuetwo" [showSuccessIcon]="valuetwo.length >= 3"
+        showErrorIcon="initial" required></kendo-textbox>
+</form>
+
+<hr />
+
+<div class="example-config">
+    <input type="checkbox" kendoCheckBox id="disabled" [(ngModel)]="disabled" />
+    <label class="k-checkbox-label" for="disabled">Disabled</label>
+</div>
+
+<kendo-textbox [disabled]="disabled" [style.width.px]="200" placeholder="First Name" type="text">
+    <ng-template kendoTextBoxPrefixTemplate>
+        <kendo-icon name="menu"></kendo-icon>
+        <kendo-textbox-separator></kendo-textbox-separator>
+        <kendo-icon name="search"></kendo-icon>
+    </ng-template>
+</kendo-textbox>
+<hr />
+
+<kendo-textbox [style.width.px]="200" placeholder="First name" [clearButton]="true"></kendo-textbox>
+<hr />
+
+<kendo-textbox [style.width.px]="200" placeholder="Contact name">
+    <ng-template kendoTextBoxSuffixTemplate>
+        <kendo-textbox-separator></kendo-textbox-separator>
+        <button kendoButton fillMode="clear" icon="calendar"></button>
+        <kendo-icon name="bell"></kendo-icon>
+    </ng-template>
+</kendo-textbox>
+<hr />
+
+<kendo-textbox [style.width.px]="350" placeholder="Search event">
+    <ng-template kendoTextBoxPrefixTemplate>
+        <kendo-icon name="menu"></kendo-icon>
+        <button kendoButton fillMode="clear" icon="calendar"></button>
+        <kendo-textbox-separator></kendo-textbox-separator>
+    </ng-template>
+</kendo-textbox>
+
+<hr />
+
+<kendo-textbox [style.width.px]="350" placeholder="Username" [maxlength]="maxlength" [clearButton]="true"
+    (valueChange)="onValueChange($event)">
+    <ng-template kendoTextBoxSuffixTemplate>
+        <span class="counter">{{ counter }}</span>
+    </ng-template>
+</kendo-textbox>
+
+<hr />
+
+
+<kendo-textbox [style.width.px]="350" placeholder="Type your message here" [clearButton]="true">
+    <ng-template kendoTextBoxPrefixTemplate>
+        <button kendoButton fillMode="clear" icon="image"></button>
+        <button kendoButton fillMode="clear" icon="calendar"></button>
+        <kendo-textbox-separator></kendo-textbox-separator>
+    </ng-template>
+    <ng-template kendoTextBoxSuffixTemplate>
+        <kendo-textbox-separator></kendo-textbox-separator>
+        <button kendoButton fillMode="clear" class="send-button">Send</button>
+    </ng-template>
+</kendo-textbox>

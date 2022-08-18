@@ -1,0 +1,50 @@
+<h4>DROPDOWN BUTTON - ICON DROPDOWN BUTTON</h4>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <kendo-dropdownbutton [data]="settings2" icon="k-icon k-i-cog" buttonClass="custom-border custom-bg">
+            User Settings
+        </kendo-dropdownbutton>
+
+        <kendo-dropdownbutton [data]="settings2" icon="k-icon k-i-cog" [buttonClass]="['custom-border', 'custom-bg']">
+        </kendo-dropdownbutton>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <kendo-dropdownbutton [data]="settings2" icon="k-icon k-i-user"
+            [buttonClass]="{ 'custom-border': false, 'custom-bg': true }">
+            Profile
+        </kendo-dropdownbutton>
+
+        <kendo-dropdownbutton [data]="settings" icon="k-icon k-i-user"
+            [buttonClass]="{ 'custom-border custom-bg': true }">
+        </kendo-dropdownbutton>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <p>Kendo UI font icon</p>
+        <kendo-dropdownbutton [data]="settings" [icon]="icon">
+            User Settings
+        </kendo-dropdownbutton>
+        <kendo-dropdownbutton [data]="settings" [icon]="icon"></kendo-dropdownbutton>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <p>FontAwsome icon</p>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <kendo-dropdownbutton [data]="settings" [iconClass]="iconClass">
+            User Settings
+        </kendo-dropdownbutton>
+        <kendo-dropdownbutton [data]="settings" [iconClass]="iconClass"></kendo-dropdownbutton>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <p>Image icon</p>
+        <kendo-dropdownbutton [data]="bookmarks" [imageUrl]="imageUrl">
+            Bookmarks
+        </kendo-dropdownbutton>
+        <kendo-dropdownbutton [data]="bookmarks" [imageUrl]="imageUrl"></kendo-dropdownbutton>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.example-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+.k-card {
+    width: 350px;
+    height: auto;
+    position: relative;
+}
+.k-card-media {
+    height: 200px;
+}
+.title {
+    font-size: 18px;
+    color: #656565;
+}
+.notes-wrap {
+    padding: 50px 20px 50px 20px;
+    position: relative;
+    height: 278px;
+}
+.notes-wrap .k-textarea {
+    width: 250px;
+    height: 100px;
+    resize: none;
+}
+.k-overlay {
+    position: absolute;
+}
+.notes-wrap kendo-floatingactionbutton {
+    z-index: 10003;
+}
+
+.contact-avatar {
+    margin-right: 8px;
+}

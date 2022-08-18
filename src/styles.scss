@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+// BOOTSTRAP CSS FILE
+@import "~bootstrap/dist/css/bootstrap.css";
+
+// COMPONENTS SCSS FILE
+@import './app/chip/chip.component.scss';
+@import './app/chiplist/overview/overview.component.scss';
+@import './app/chiplist/appearance/appearance.component.scss';
+@import './app/chiplist/events/event-log/event-log.component.scss';
+@import './app//dropdownbutton/icondpb/icondpb.component.scss';
+@import './app//dropdownbutton/appearancedb/appearancedb.component.scss';
+@import './app/dropdownbutton/eventsdp/elogdb/elogdb.component.scss';
+@import './app/floatingactionbtn//overviewfabtn/overviewfabtn.component.scss';
+@import './app/floatingactionbtn/positioning/positioning.component.scss';

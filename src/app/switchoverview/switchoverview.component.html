@@ -1,0 +1,32 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+<form class="k-form" [formGroup]="form">
+    <kendo-formfield>
+        <kendo-label [for]="allow" text="Allow Notifications"></kendo-label>
+        <kendo-switch [readonly]="readonly" [disabled]="disabled" #allow formControlName="notifications"></kendo-switch>
+        <kendo-formhint>You will receive notifications</kendo-formhint>
+        <kendo-formerror>This field is required</kendo-formerror>
+    </kendo-formfield>
+</form>
+<!-- <form [formGroup]="form">
+    <div class="example-config">
+        <p>The form is valid: <strong>{{form.controls.switch.valid}}</strong></p>
+        <p>
+            The form switch value is :
+            <strong>
+                {{form.controls.switch.value}}
+            </strong>
+        </p>
+    </div>
+    <kendo-switch formControlName="switch"></kendo-switch>
+</form> -->
+<!-- <form #form="ngForm">
+    <div class="example-config">
+        <p>the switch value is: <strong>{{value}}</strong></p>
+    </div>
+    <label>
+        Select value:
+        <kendo-switch name="switch" [(ngModel)]="value"></kendo-switch>
+    </label>
+</form>
+<kendo-switch [(ngModel)]="checked" onLabel="Enable" offLabel="Disable" style="width:85px;"></kendo-switch> -->

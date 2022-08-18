@@ -1,0 +1,68 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+
+<div class="example-config">
+    <input kendoCheckBox id="ac" type="checkbox" [(ngModel)]="includeLiterals" />
+    <label class="literal-label" for="ac">Include literals in the value</label>
+</div>
+<div class="example-wrapper">
+    <kendo-maskedtextbox [style.width.px]="170" [includeLiterals]="includeLiterals" [(value)]="value" [mask]="mask"
+        [disabled]="disabled" [readonly]="readonly">
+    </kendo-maskedtextbox>
+    Component value: {{ value }}
+</div>
+
+<!-- <div class="example">
+    <form class="k-form" [formGroup]="form">
+        <kendo-formfield showHints="initial" showErrors="initial">
+            <kendo-label [for]="phoneNumber" text="Phone Number"></kendo-label>
+            <kendo-maskedtextbox #phoneNumber formControlName="phoneNumber" [mask]="phoneNumberMask"
+                [value]="phoneNumberValue"></kendo-maskedtextbox>
+
+            <kendo-formhint align="start">Hint: Your active phone number</kendo-formhint>
+            <kendo-formerror>
+                <div *ngIf="form.controls.phoneNumber.errors">
+                    Error: Not a valid phone number format
+                </div>
+                <div *ngIf="form.controls.phoneNumber.errors?.required">
+                    Error: Phone number is required
+                </div>
+            </kendo-formerror>
+        </kendo-formfield>
+    </form>
+</div> -->
+
+
+<!-- <div class="example-config">
+    Question mark (?) is a placeholder for a letter or a space.
+</div>
+<form [formGroup]="form" #reactiveForm="ngForm">
+    <kendo-maskedtextbox [style.width.px]="170" formControlName="masked" mask="??????????"></kendo-maskedtextbox>
+    <br />
+    <p *ngIf="form.controls.masked.errors">
+        {{ form.controls.masked.errors | json }}
+    </p>
+</form> -->
+
+<!-- <form #form="ngForm">
+    <div class="example-config">
+        <pre>{{ value | json }}</pre>
+    </div>
+    <label>
+        Select Gender:
+        <kendo-maskedtextbox [style.width.px]="170" name="masked" mask="??????????" [(ngModel)]="value">
+        </kendo-maskedtextbox>
+        <br />
+    </label>
+</form> -->
+
+<!-- <form #templateForm="ngForm" novalidate>
+    <p>Enter valid postcode (A9 9AA)</p>
+    <kendo-maskedtextbox [style.width.px]="170" name="value1" [(ngModel)]="value" [mask]="mask"
+        [maskValidation]="maskValidation"></kendo-maskedtextbox>
+    <button kendoButton [disabled]="!templateForm.valid" type="submit">
+        Submit
+    </button>
+</form> -->
+<!-- <p>Enter phone number</p>
+<kendo-maskedtextbox [style.width.px]="170" [mask]="mask" [value]="value"></kendo-maskedtextbox> -->

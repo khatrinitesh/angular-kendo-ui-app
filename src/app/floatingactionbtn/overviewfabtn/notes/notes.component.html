@@ -1,0 +1,13 @@
+<div class="notes-wrap k-block">
+    <div class="k-overlay" *ngIf="dialOpen"></div>
+    <h2 class="title">Notes:</h2>
+    <textarea class="k-textarea k-input" [value]="text"></textarea>
+
+    <kendo-floatingactionbutton [icon]="icon" [dialItems]="contacts" positionMode="absolute" (open)="onDialOpen()"
+        (close)="onDialClose()">
+        <ng-template kendoDialItemTemplate let-item>
+            <span class="k-fab-item-text">{{ item.name }}</span>
+            <kendo-avatar class="contact-avatar" shape="circle" [imageSrc]="item.image"></kendo-avatar>
+        </ng-template>
+    </kendo-floatingactionbutton>
+</div>

@@ -1,0 +1,57 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+<kendo-datepicker></kendo-datepicker>
+<hr />
+<div class="row example-wrapper" style="min-height: 450px;">
+    <div class="col-xs-12 col-md-6 example-col">
+        <p><b>DateInput</b></p>
+        <kendo-dateinput [value]="value"></kendo-dateinput>
+        <p>
+            (use <code>←</code> and <code>→</code> to navigate, <code>↑</code> and
+            <code>↓</code> to update)
+        </p>
+
+        <p><b>DatePicker</b></p>
+        <kendo-datepicker [value]="value"></kendo-datepicker>
+        <p>(use <code>Alt</code>+<code>↓</code> to open the Calendar)</p>
+
+        <p><b>TimePicker</b></p>
+        <kendo-timepicker [value]="value"></kendo-timepicker>
+        <p>
+            (use <code>Alt+↓</code> to open the time list, Tab to move to the next
+            time section in the popup, <code>↑</code> to increment and
+            <code>↓</code> to decrement the value)
+        </p>
+
+        <p><b>DateTimePicker</b></p>
+        <kendo-datetimepicker [value]="value"> </kendo-datetimepicker>
+        <p>
+            (use <code>Alt+↓</code> to open the popup, Alt+<code>←</code> and
+            Alt+<code>→</code>
+            to switch between the tabs when open)
+        </p>
+
+        <p><b>DateRange</b></p>
+        <kendo-daterange>
+            <kendo-floatinglabel text="Start">
+                <kendo-dateinput kendoDateRangeStartInput [(value)]="range.start"></kendo-dateinput>
+            </kendo-floatinglabel>
+            <kendo-floatinglabel text="End">
+                <kendo-dateinput kendoDateRangeEndInput [(value)]="range.end"></kendo-dateinput>
+            </kendo-floatinglabel>
+        </kendo-daterange>
+        <p>
+            (use <code>←</code>, <code>→</code>, <code>↓</code>, <code>↑</code> to
+            navigate, and <code>ENTER</code> to update)
+        </p>
+    </div>
+    <div class="col-xs-12 col-md-6 example-col">
+        <p><b>Calendar</b></p>
+        <kendo-calendar [value]="value"></kendo-calendar>
+        <br />
+        <br />
+        <p><b>MultiViewCalendar</b></p>
+        <kendo-multiviewcalendar [value]="value"></kendo-multiviewcalendar>
+    </div>
+</div>
+<hr />

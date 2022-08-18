@@ -1,0 +1,418 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-12 col-md-4 example-col">
+        <p>Icons only</p>
+        <kendo-buttongroup>
+            <button kendoButton [toggleable]="true" icon="bold"></button>
+            <button kendoButton [toggleable]="true" icon="italic"></button>
+            <button kendoButton [toggleable]="true" icon="underline"></button>
+        </kendo-buttongroup>
+    </div>
+    <div class="col-sm-12 col-md-4 example-col">
+        <p>Text only</p>
+        <kendo-buttongroup>
+            <button kendoButton [toggleable]="true">Bold</button>
+            <button kendoButton [toggleable]="true">Italic</button>
+            <button kendoButton [toggleable]="true">Underline</button>
+        </kendo-buttongroup>
+    </div>
+    <div class="col-sm-12 col-md-4 example-col">
+        <p>Icons + Text</p>
+        <kendo-buttongroup>
+            <button kendoButton [toggleable]="true" icon="bold">Bold</button>
+            <button kendoButton [toggleable]="true" icon="italic">Italic</button>
+            <button kendoButton [toggleable]="true" icon="underline">
+                Underline
+            </button>
+        </kendo-buttongroup>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 example-col">
+        <p>Buttons with responsive width</p>
+        <kendo-buttongroup width="100%">
+            <button kendoButton [toggleable]="true" icon="bold">Bold</button>
+            <button kendoButton [toggleable]="true" icon="italic">Italic</button>
+            <button kendoButton [toggleable]="true" icon="underline">
+                Underline
+            </button>
+        </kendo-buttongroup>
+    </div>
+</div>
+<hr />
+
+<p>
+    <kendo-buttongroup (navigate)="onNavigate($event)">
+        <button kendoButton (click)="onCClick('bold')" [toggleable]="true">
+            Bold
+        </button>
+        <button kendoButton (click)="onCClick('italic')" [toggleable]="true">
+            Italic
+        </button>
+        <button kendoButton (click)="onCClick('underline')" [toggleable]="true">
+            Underline
+        </button>
+    </kendo-buttongroup>
+</p>
+<app-stylingevent title="Event log" [events]="events"></app-stylingevent>
+
+<hr />
+
+<!-- <div class="example-config">Selected Days: {{ selectedDays | json }}</div> -->
+<!-- <div class="row">
+    <div class="col-sm-12 col-md-4 example-col">
+        <p>Days</p>
+        <kendo-buttongroup selection="multiple">
+            <button *ngFor="let button of weeks" kendoButton [toggleable]="true"
+                (selectedChange)="weeksselectedChange($event, button)">
+                {{ button.text }}
+            </button>
+        </kendo-buttongroup>
+    </div>
+</div> -->
+
+<!-- <p>Notification container</p>
+<div class="append-container" #container style=" height: 150px; border: 1px solid black;"></div> -->
+
+<hr />
+
+<div class="teamMate">
+    <img [src]="img" alt="Nancy Leverling" />
+    <span class="k-icon k-i-circle status" [ngStyle]="{ color: status }"></span>
+    <span class="mate-info">
+        <h2>Nancy Leverling</h2>
+        <p>Team Lead</p>
+    </span>
+</div>
+
+<kendo-buttongroup width="100%" selection="single">
+    <button *ngFor="let button of buttons" kendoButton [toggleable]="true" [selected]="button.selected"
+        (selectedChange)="cselectedChange($event, button)">
+        <span>
+            <span class="k-icon {{ button.icon }}"></span>
+            {{ button.text }}
+        </span>
+    </button>
+</kendo-buttongroup>
+
+<hr />
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Single selection mode</p>
+        <kendo-buttongroup selection="single">
+            <button kendoButton [toggleable]="true" icon="align-left"></button>
+            <button kendoButton [toggleable]="true" icon="align-center"></button>
+            <button kendoButton [toggleable]="true" icon="align-right"></button>
+            <button kendoButton [toggleable]="true" icon="align-justify"></button>
+        </kendo-buttongroup>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Multiple selection mode</p>
+        <kendo-buttongroup>
+            <button kendoButton [toggleable]="true" icon="bold"></button>
+            <button kendoButton [toggleable]="true" icon="italic"></button>
+            <button kendoButton [toggleable]="true" icon="underline"></button>
+        </kendo-buttongroup>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Disabled ButtonGroup</p>
+        <kendo-buttongroup [disabled]="disabled">
+            <button kendoButton [toggleable]="true" [disabled]="disabled">
+                Bold
+            </button>
+            <button kendoButton [toggleable]="true" [disabled]="disabled">
+                Italic
+            </button>
+            <button kendoButton [toggleable]="true" [disabled]="disabled">
+                Underline
+            </button>
+        </kendo-buttongroup>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>ButtonGroup with Disabled Button</p>
+        <kendo-buttongroup>
+            <button kendoButton [toggleable]="true">Bold</button>
+            <button kendoButton [toggleable]="true" [disabled]="disabled">
+                Italic
+            </button>
+            <button kendoButton [toggleable]="true">Underline</button>
+        </kendo-buttongroup>
+    </div>
+</div>
+<button kendoButton (click)="toggleDisabled()" themeColor="primary">
+    Toggle Disabled States
+</button>
+
+<hr />
+<p>
+    <button kendoButton (click)="onClick()" (focus)="onFocus()" (blur)="onBlur()">
+        My Button
+    </button>
+
+    <button kendoButton [toggleable]="true" (selectedChange)="selectedChange()">
+        Toggleable Button
+    </button>
+</p>
+<event-log title="Event log" [events]="events"></event-log>
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Default Toggleable Button</p>
+        <p class="k-block">
+            <button kendoButton (selectedChange)="onSelectedChange($event)" themeColor="primary" [toggleable]="true">
+                Petrol
+            </button>
+            <button kendoButton (selectedChange)="onSelectedChange($event)" [toggleable]="true">
+                Diesel
+            </button>
+        </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Flat Toggleable Button</p>
+        <p class="k-block">
+            <button kendoButton fillMode="flat" themeColor="primary" [toggleable]="true">
+                Petrol
+            </button>
+            <button kendoButton fillMode="flat" [toggleable]="true">
+                Diesel
+            </button>
+        </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Outline Toggleable Button</p>
+        <p class="k-block">
+            <button kendoButton fillMode="outline" themeColor="primary" [toggleable]="true">
+                Petrol
+            </button>
+            <button kendoButton fillMode="outline" [toggleable]="true">
+                Diesel
+            </button>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Default Disabled Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" themeColor="primary" [disabled]="false">
+                Apply
+            </button>
+            <button kendoButton (click)="onButtonClick()" [disabled]="true">
+                Cancel
+            </button>
+        </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Flat Disabled Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="flat" themeColor="primary" [disabled]="true">
+                Apply
+            </button>
+            <button kendoButton (click)="onButtonClick()" fillMode="flat" [disabled]="true">
+                Cancel
+            </button>
+        </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Outline Disabled Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="outline" themeColor="primary" [disabled]="true">
+                Apply
+            </button>
+            <button kendoButton (click)="onButtonClick()" fillMode="outline" [disabled]="true">
+                Cancel
+            </button>
+        </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Link Disabled Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="link" themeColor="primary" [disabled]="true">
+                Apply
+            </button>
+            <button kendoButton (click)="onButtonClick()" fillMode="link" [disabled]="true">
+                Cancel
+            </button>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <p>Kendo UI font icon</p>
+        <button kendoButton icon="calendar">Events 1</button>
+        <button kendoButton icon="calendar">Events 2</button>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <p>FontAwsome icon</p>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <button kendoButton iconClass="fa fa-calendar fa-fw">Events 1</button>
+        <button kendoButton iconClass="fa fa-calendar fa-fw">Events 2</button>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 example-col">
+        <p>Image icon</p>
+        <button kendoButton imageUrl="https://demos.telerik.com/kendo-ui/content/shared/icons/sports/snowboarding.png">
+            Snowboarding 1
+        </button>
+        <button kendoButton
+            imageUrl="https://demos.telerik.com/kendo-ui/content/shared/icons/sports/snowboarding.png">Snowboarding
+            2</button>
+    </div>
+</div>
+
+<app-configurator [options]="options" (optionChange)="changeHandler($event)">
+</app-configurator>
+
+<div class="example-config">
+    <button kendoButton [size]="size" [rounded]="rounded" [fillMode]="fillMode" [themeColor]="themeColor">
+        User Settings
+    </button>
+</div>
+
+<button class="btn btn-primary" (click)="onButtonClick()">Click Button</button>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+        <p>Solid Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()">Browse</button>
+            <button kendoButton (click)="onButtonClick()" icon="folder">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder"></button>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+        <p>Flat Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="flat">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="flat">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="flat"></button>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+        <p>Outline Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="outline">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="outline">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="outline"></button>
+        </p>
+    </div>\ <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+        <p>Clear Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="clear">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="clear">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="clear"></button>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+        <p>Clear Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="clear">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="clear">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="clear"></button>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+        <p>Link Button</p>
+        <p class="k-block">
+            <button kendoButton (click)="onButtonClick()" fillMode="link">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="link">
+                Browse
+            </button>
+            <button kendoButton (click)="onButtonClick()" icon="folder" fillMode="link"></button>
+        </p>
+    </div>
+</div>
+
+<div class="example-wrapper">
+    <div class="example-col">
+        <p>Button</p>
+        <button kendoButton (click)="onButtonClick()">Default</button>
+        <button kendoButton (click)="onButtonClick()" themeColor="primary">
+            Primary
+        </button>
+        <button kendoButton (click)="onButtonClick()" [disabled]="FALSE">
+            Disabled
+        </button>
+    </div>
+    <hr />
+    <div class="example-col">
+        <p>ButtonGroup</p>
+        <kendo-buttongroup>
+            <button kendoButton [toggleable]="true">Option A</button>
+            <button kendoButton [toggleable]="true">Option B</button>
+            <button kendoButton [toggleable]="true">Option C</button>
+        </kendo-buttongroup>
+    </div>
+    <hr />
+    <div class="example-col">
+        <p>DropDownButton</p>
+        <kendo-dropdownbutton [data]="dropDownButtonItems" icon="cog" (itemClick)="onSplitButtonItemClick($event)">
+            User Settings
+        </kendo-dropdownbutton>
+    </div>
+    <div class="example-col">
+        <p>SplitButton</p>
+        <kendo-splitbutton [disabled]='false' [data]="splitButtonItems" icon="paste"
+            (itemClick)="onSplitButtonItemClick($event)" (buttonClick)="onSplitButtonClick()">
+            Paste
+        </kendo-splitbutton>
+    </div>
+    <hr />
+    <div class="example-col">
+        <p>Chip</p>
+        <kendo-chip-list selection="multiple">
+            <kendo-chip *ngFor="let chip of chips" [label]="chip.label" [iconClass]="chip.iconClass"></kendo-chip>
+        </kendo-chip-list>
+    </div>
+    <hr />
+    <div class="example-col">
+        <kendo-floatingactionbutton icon="plus" text="Add New" [align]="{ horizontal: 'start', vertical: 'bottom' }"
+            (click)="onFabClick()">
+        </kendo-floatingactionbutton>
+    </div>
+    <div class="example-col">
+        <kendo-floatingactionbutton icon="share" [dialItems]="fabItems">
+        </kendo-floatingactionbutton>
+    </div>
+
+
+</div>

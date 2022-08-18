@@ -1,0 +1,12 @@
+<h4>DROPDOWN BUTTON - POPUP ITEMS</h4>
+<kendo-dropdownbutton [data]="data" [popupSettings]="{ popupClass: popupClass, animate: true }">
+    User Settings
+</kendo-dropdownbutton>
+
+<kendo-dropdownbutton [data]="data2">
+    Export
+    <ng-template kendoDropDownButtonItemTemplate let-dataItem>
+        <span class="k-icon k-i-{{ dataItem.icon }}"></span>
+        <span>{{ dataItem.text }}</span>
+    </ng-template>
+</kendo-dropdownbutton>

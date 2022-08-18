@@ -1,0 +1,34 @@
+<h4>DROPDOWN BUTTON - APPEARANCE</h4>
+
+<h5>SIZE</h5>
+<div class="example">
+    <kendo-dropdownbutton [data]="data1" size="small">Small</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data1" size="medium">Medium</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data1" size="large">Large</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data1" size="none" class="custom-size">Custom</kendo-dropdownbutton>
+</div>
+
+<h5>Roundness</h5>
+<div class="example">
+    <kendo-dropdownbutton [data]="data2" rounded="none">No Roundness</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data2" rounded="small">Small</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data2" rounded="medium">Medium</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data2" rounded="large">Large</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data" rounded="full">Full</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data" rounded="none" class="custom-rounded">Custom</kendo-dropdownbutton>
+</div>
+
+<h5>Fill Mode</h5>
+<div class="example-config">
+    <kendo-dropdownbutton [data]="data3" fillMode="solid">Solid</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data3" fillMode="flat">Flat</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data3" fillMode="outline">Outline</kendo-dropdownbutton>
+    <kendo-dropdownbutton [data]="data3" fillMode="link">Link</kendo-dropdownbutton>
+</div>
+
+<h5>Theme colors</h5>
+<div class="example">
+    <kendo-dropdownbutton *ngFor="let color of themeColors; index as i" [data]="data4" [themeColor]="color">
+        {{ color }}
+    </kendo-dropdownbutton>
+</div>

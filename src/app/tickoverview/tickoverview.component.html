@@ -1,0 +1,54 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+<div>
+    <label>
+        <input id="toggle" type="checkbox" kendoCheckBox [(ngModel)]="readonly" />
+        Current state: {{ readonly ? "Readonly" : "Active" }}
+    </label>
+</div>
+<kendo-rangeslider [readonly]="readonly" [min]="min" [max]="max" [(ngModel)]="value"></kendo-rangeslider>
+
+
+<!-- <div>
+    <label>
+        <input id="toggle" type="checkbox" kendoCheckBox [(ngModel)]="disabled" />
+        Click to {{ disabled ? "enable" : "disable" }}
+    </label>
+</div>
+<kendo-rangeslider [(ngModel)]="enable" [disabled]="disabled" [min]="min" [max]="max" [(ngModel)]="value"></kendo-rangeslider> -->
+
+<!-- <div class="row">
+    <div class="col-sm-12 col-md-6">
+        <kendo-rangeslider [min]="0" [max]="12" [smallStep]="1" [largeStep]="2"></kendo-rangeslider>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <kendo-rangeslider [min]="0" [max]="12" [smallStep]="2" [largeStep]="2"></kendo-rangeslider>
+    </div>
+</div> -->
+
+<!-- <div class="wrap">
+    <kendo-rangeslider [min]="0" [max]="12" [largeStep]="1" [smallStep]="2">
+    </kendo-rangeslider>
+    <span class="text-wrap">Small step: 2</span>
+</div>
+<div class="wrap">
+    <kendo-rangeslider [min]="0" [max]="12" [largeStep]="1" [smallStep]="4">
+    </kendo-rangeslider>
+    <span class="text-wrap">Small step: 4</span>
+</div>
+<div class="wrap">
+    <kendo-rangeslider [min]="0" [max]="12" [largeStep]="1" [smallStep]="6">
+    </kendo-rangeslider>
+    <span class="text-wrap">Small step: 6</span>
+</div> -->
+
+<!-- <kendo-rangeslider [fixedTickWidth]="fixedTickWidth" [min]="min" [max]="max" [(ngModel)]="value"></kendo-rangeslider> -->
+
+
+<!-- <kendo-rangeslider [title]="title" [max]="max" [min]="min" [largeStep]="true" [(ngModel)]="value"></kendo-rangeslider>
+<div class="wrapper">
+    <kendo-rangeslider [tickPlacement]="tickPlacement" [min]="min" [max]="max" [(ngModel)]="value"></kendo-rangeslider>
+    <label>Select Tick Placement
+        <kendo-dropdownlist [data]="listItems" [(ngModel)]="tickPlacement"></kendo-dropdownlist>
+    </label>
+</div> -->

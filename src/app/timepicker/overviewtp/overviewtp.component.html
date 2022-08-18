@@ -1,0 +1,74 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+<div class="example-config">
+    Selected value is: {{ value | kendoDate: "hh:mm:ss a" }}
+</div>
+<div class="example-wrapper" style="min-height: 400px">
+    <p>Select a time value:</p>
+    <kendo-timepicker [readonly]="true" [(value)]="value"></kendo-timepicker>
+    <p>
+        (use Alt+↓ to open the time list, Tab to move to the next time section
+        in the popup, ↑ to increment and ↓ to decrement the value)
+    </p>
+</div>
+<hr />
+<div class="example-config">
+    <p>
+        Only values between {{ min | kendoDate: "t" }} and
+        {{ max | kendoDate: "t" }} are valid
+    </p>
+    <p>Errors: {{ dateModel.errors | json }}</p>
+</div>
+<div class="example-wrapper">
+    <p>Select a time:</p>
+    <kendo-timepicker [min]="min" [max]="max" [(ngModel)]="value2" #dateModel="ngModel"></kendo-timepicker>
+</div>
+<hr />
+<div class="example-config">
+    <p>Errors: {{ dateModel.errors | json }}</p>
+</div>
+<kendo-label [for]="timepicker" [style.display]="'block'" text="Select a time:"></kendo-label>
+<kendo-timepicker [incompleteDateValidation]="true" [(ngModel)]="value3" #dateModel="ngModel" #timepicker>
+</kendo-timepicker>
+<hr />
+<div class="example-wrapper">
+    <label [for]="timepicker" [style.display]="'block'">Select a time:
+    </label>
+    <kendo-timepicker #timepicker format="HH:mm:ss:SSS" [steps]="steps" [value]="value4"></kendo-timepicker>
+    <p>(↑ to increment and ↓ to decrement the value)</p>
+</div>
+<hr />
+<div class="example-wrapper" style="min-height: 400px;">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Select a long time:</p>
+        <kendo-timepicker format="HH:mm:ss" [value]="value"></kendo-timepicker>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Select a short time:</p>
+        <kendo-timepicker format="hh:mm a" [value]="value5"></kendo-timepicker>
+    </div>
+</div>
+<hr />
+<div class="example-wrapper" style="min-height: 400px;">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Select date:</p>
+        <kendo-timepicker placeholder="Type in your birth date..."></kendo-timepicker>
+    </div>
+</div>
+<hr />
+<form #form="ngForm">
+    <div class="example-config">
+        <p>
+            The selected birth date is
+            <strong>{{ user.birthDate | kendoDate: "t" }}</strong>
+        </p>
+        <p *ngIf="!form.valid">
+            Only values between 02:00 AM and 10:00 PM are valid!
+        </p>
+    </div>
+    <label>
+        Select Birthdate:
+        <kendo-timepicker name="birthDate" [(ngModel)]="user.birthDate" [min]="min1" [max]="max2"></kendo-timepicker>
+    </label>
+</form>

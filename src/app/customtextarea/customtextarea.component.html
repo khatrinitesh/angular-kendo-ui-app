@@ -1,0 +1,198 @@
+<a routerLink="/" class="btn btn-primary">BACK</a>
+<hr />
+
+<textarea [autoSize]='true' [style.width.px]="200" kendoTextArea></textarea>
+<hr />
+<div class="wrapper">
+    <kendo-textarea [style.width.px]="200" [readonly]="true" [value]="readOnlyValueExample">
+    </kendo-textarea>
+
+    <kendo-textarea [style.width.px]="200" [value]="normalValue">
+    </kendo-textarea>
+</div>
+<div class="example-config">
+    <div>
+        <input type="checkbox" id="disabled" [(ngModel)]="isDisabled" />
+        <label class="k-checkbox-label" for="disabled">Disabled</label>
+    </div>
+    <div>
+        <kendo-textarea [disabled]="isDisabled" fillMode="flat" [style.width.px]="170" placeholder="Flat">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea [disabled]="isDisabled" fillMode="solid" [style.width.px]="170" placeholder="Solid">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea [disabled]="isDisabled" fillMode="outline" [style.width.px]="170" placeholder="Outline">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea [disabled]="isDisabled" fillMode="none" class="custom-fill-mode" [style.width.px]="170"
+            placeholder="Custom">
+        </kendo-textarea>
+    </div>
+</div>
+
+<div class="example-wrapper">
+    <div>
+        <kendo-textarea rounded="none" [style.width.px]="170" placeholder="No Roundness">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea rounded="small" [style.width.px]="170" placeholder="Small">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea rounded="medium" [style.width.px]="170" placeholder="Medium">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea rounded="large" [style.width.px]="170" placeholder="Large">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea rounded="full" [style.width.px]="170" placeholder="Full">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea rounded="none" class="custom-rounded" [style.width.px]="170" placeholder="Custom">
+        </kendo-textarea>
+    </div>
+</div>
+
+<div class="example-wrapper">
+    <div>
+        <kendo-textarea size="small" [style.width.px]="170" placeholder="Small">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea size="medium" [style.width.px]="170" placeholder="Medium">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea size="large" [style.width.px]="170" placeholder="Large">
+        </kendo-textarea>
+    </div>
+    <div>
+        <kendo-textarea size="none" class="custom-size" [style.width.px]="170" placeholder="Custom">
+        </kendo-textarea>
+    </div>
+</div>
+
+<app-configurator [options]="options" (optionChange)="changeHandler($event)">
+</app-configurator>
+<div class="example-config">
+    <kendo-textarea [style.width.px]="180" placeholder="Enter your name" [size]="size" [rounded]="rounded"
+        [fillMode]="fillMode">
+    </kendo-textarea>
+</div>
+
+<div class="example-config">
+    <p>Comments are required and must be at least 5 characters long.</p>
+    <p>Comment: {{ reactiveForm.controls.comment.value }}</p>
+</div>
+<form [formGroup]="reactiveForm">
+    <kendo-label [for]="comments2" text="Please leave a comment" class="customizing-label"></kendo-label>
+
+    <kendo-textarea #comments2 [style.width.px]="200" formControlName="comment" placeholder="Leave a comment">
+    </kendo-textarea>
+</form>
+
+<div class="example-config">
+    <p>Comments are required and must be at least 5 characters long.</p>
+    <p>Comment: {{comment}}</p>
+    <form #templateForm="ngForm">
+        <kendo-label [for]="comments" text="Please leave a comment" class="customizing-label">
+        </kendo-label>
+        <kendo-textarea #comments [style.width.px]="200" name="comments" [(ngModel)]="comment" required minlength="5"
+            placeholder="Comment"></kendo-textarea>
+    </form>
+</div>
+<hr />
+<div class="wrapper">
+    <kendo-textarea [style.width.px]="150" value="Resize vertically" resizeable="vertical">
+
+    </kendo-textarea>
+    <kendo-textarea style="width:auto" value="Resize in both directions" resizeable="horizontal"></kendo-textarea>
+    <kendo-textarea style="width:auto" value="Resize in both directions" resizeable="both"></kendo-textarea>
+    <kendo-textarea style="width:auto" value="Resize in both directions" resizeable="none" [disabled]="disabled">
+    </kendo-textarea>
+</div>
+<div class="wrapper">
+    <kendo-textarea [rows]="5" [style.width.px]="200" [value]="textAreaWithRowsValue">
+    </kendo-textarea>
+
+    <kendo-textarea [rows]="5" [cols]="10" style="width: auto;" [value]="textAreaWithColsValue">
+    </kendo-textarea>
+</div>
+
+<hr />
+
+<div class="wrapper">
+    <input type="checkbox" kendoCheckBox id="disabled" [(ngModel)]="disabled" />
+    <label class="k-checkbox-label" for="disabled">Disabled</label>
+    <kendo-label text="About yourself:" [for]="aboutYourself">
+        <kendo-textarea [disabled]="disabled" [flow]="flow" #aboutYourself [style.width.px]="200" [cols]="40" [rows]="5"
+            placeholder="Enter text here..." resizable="none">
+            <kendo-textarea-suffix class="suffix-bottom">
+                <button kendoButton fillMode="clear" icon="photo"></button>
+                <button kendoButton fillMode="clear" icon="camera"></button>
+                <button kendoButton fillMode="clear" icon="gear"></button>
+            </kendo-textarea-suffix>
+        </kendo-textarea>
+    </kendo-label>
+
+    <kendo-label text="Your proposal:" [for]="yourProposal">
+        <kendo-textarea #yourProposal [style.width.px]="200" [(ngModel)]="value2" [rows]="5" flow="horizontal"
+            placeholder="Enter text here..." resizable="none">
+            <kendo-textarea-suffix>
+                <button kendoButton class="suffix-clear-button" fillMode="clear" icon="close"
+                    (click)="clearValue2()"></button>
+            </kendo-textarea-suffix>
+        </kendo-textarea>
+    </kendo-label>
+</div>
+
+
+<div class="wrapper">
+    <h2>Invitation</h2>
+    <kendo-textarea #invitation [style.width.px]="200" resizable="auto" [maxlength]="maxlength" [value]="value"
+        (valueChange)="onValueChange($event)">
+        <kendo-textarea-suffix class="custom-styling">
+            <span class="counter">{{ counter }}</span>
+        </kendo-textarea-suffix>
+    </kendo-textarea>
+</div>
+
+<div class="contact-form">
+    <div class="k-panel">
+        <kendo-avatar [imageSrc]="firstContactImage"></kendo-avatar>
+        <div class="client-section">
+            <div class="client-name-message">
+                <span class="k-text-primary k-font-weight-bold">James Magneot</span>
+                <div class="k-text-base">
+                    Hi, I need some assistance with the installer, who should I turn
+                    to?
+                </div>
+            </div>
+            <span class="k-font-weight-bold">1h</span>
+        </div>
+    </div>
+    <div class="k-panel">
+        <kendo-avatar [imageSrc]="secondContactImage"></kendo-avatar>
+        <kendo-textarea [style.width.px]="250" resizable="auto" [(ngModel)]="textAreaValue">
+            <kendo-textarea-suffix class="custom-suffix">
+                <button kendoButton fillMode="clear" icon="photo"></button>
+                <button kendoButton fillMode="clear" icon="camera"></button>
+                <span class="k-flex-1"></span>
+                <button kendoButton fillMode="clear" icon="close-circle" (click)="clearValue()"
+                    class="button-opacity"></button>
+                <kendo-input-separator class="k-text-base"></kendo-input-separator>
+                <button kendoButton fillMode="clear" class="send-button">
+                    Send
+                </button>
+            </kendo-textarea-suffix>
+        </kendo-textarea>
+    </div>
+</div>

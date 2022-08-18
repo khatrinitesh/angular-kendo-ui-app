@@ -1,0 +1,9 @@
+<h4>CHIPLIST - EVENTS</h4>
+<p>
+    <kendo-chiplist selection="multiple" (selectedChange)="selectedChange($event)" (remove)="onRemove($event)">
+        <kendo-chip *ngFor="let chip of chips" [label]="chip.label" [icon]="chip.icon" [removable]="chip.removable">
+        </kendo-chip>
+    </kendo-chiplist>
+</p>
+
+<event-log title="Event log" [events]="events"></event-log>

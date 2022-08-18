@@ -1,0 +1,7 @@
+<div class="configurator">
+    <kendo-label *ngFor="let option of options" [text]="option.type | uppercase">
+        <kendo-dropdownlist [style.width.px]="150" [data]="option.data" [value]="option.default"
+            (selectionChange)="onItemClick($event, option.type)">
+        </kendo-dropdownlist>
+    </kendo-label>
+</div>

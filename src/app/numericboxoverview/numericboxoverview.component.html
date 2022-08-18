@@ -1,0 +1,83 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+
+<kendo-numerictextbox [style.width.px]="170" [spinners]="false" [step]="1" [value]="5" [disabled]="true"
+    [readonly]="true">
+</kendo-numerictextbox>
+
+<!-- <h6>Decimal</h6>
+<kendo-numerictextbox [style.width.px]="170" format="n2" [value]="value"></kendo-numerictextbox>
+
+<h6>Percentage</h6>
+<kendo-numerictextbox [style.width.px]="170" format="p" [step]="0.1" [min]="0" [max]="1" [value]="percentage">
+</kendo-numerictextbox>
+
+<h6>Currency</h6>
+<kendo-numerictextbox [style.width.px]="170" format="c0" [min]="0" [value]="value"></kendo-numerictextbox> -->
+
+<!-- <h6>Currency with format options</h6>
+<kendo-numerictextbox [style.width.px]="170" [format]="formatOptions" [value]="value" [min]="0"></kendo-numerictextbox> -->
+
+<!-- <div class="example">
+    <form class="k-form" [formGroup]="form">
+        <kendo-formfield showHints="initial" showErrors="initial">
+            <kendo-label [for]="amount" text="Amount"></kendo-label>
+            <kendo-numerictextbox #amount formControlName="amount" [min]="0"></kendo-numerictextbox>
+            <kendo-formhint align="start"> Hint: Amount </kendo-formhint>
+            <kendo-formerror>Error: Amount is required</kendo-formerror>
+        </kendo-formfield>
+    </form>
+</div> -->
+
+<!-- <div class="example">
+    <form class="k-form" [formGroup]="form">
+        <kendo-formfield showHints="initial" showErrors="initial">
+            <kendo-label [for]="amount" text="Amount"></kendo-label>
+            <kendo-numerictextbox #amount formControlName="amount" [min]="0"></kendo-numerictextbox>
+            <kendo-formhint align="start"> Hint: Amount </kendo-formhint>
+            <kendo-formerror>Error: Amount is required</kendo-formerror>
+        </kendo-formfield>
+    </form>
+</div> -->
+
+<!-- <div class="example-config">
+    <p>Only values between -10 and 20 are valid.</p>
+    <p>Value: {{ form.controls.numeric.value }}</p>
+    <p *ngIf="form.controls.numeric.errors">
+        {{ form.controls.numeric.errors | json }}
+    </p>
+</div>
+<form [formGroup]="form" #reactiveForm="ngForm">
+    <kendo-numerictextbox [style.width.px]="170" formControlName="numeric" [min]="-10" [max]="20">
+    </kendo-numerictextbox>
+</form>
+ -->
+
+<!-- <div class="example-config">
+    <p>Only values between 1 and 100 are valid.</p>
+    <p>Value: {{ user.age }}</p>
+    <p *ngIf="!templateForm.valid">
+        {{ templateForm.controls.age.errors | json }}
+    </p>
+</div>
+<form #templateForm="ngForm">
+    <kendo-numerictextbox [style.width.px]="170" name="age" [(ngModel)]="user.age" [min]="1" [max]="100">
+    </kendo-numerictextbox>
+</form> -->
+
+
+<!-- <kendo-numerictextbox [style.width.px]="170" [step]="step" [value]="value"></kendo-numerictextbox> -->
+
+
+<!-- <p><strong>maxlength</strong> is set to 3</p>
+<kendo-numerictextbox [style.width.px]="170" [format]="format" [value]="value" [maxlength]="maxlength">
+</kendo-numerictextbox> -->
+
+<!-- <kendo-numerictextbox [style.width.px]="170" [decimals]="decimals" [format]="format" [value]="value2">
+</kendo-numerictextbox> -->
+<!-- <div class="example-config">
+    <input kendoCheckBox id="ac" type="checkbox" [(ngModel)]="autoCorrect" />
+    <label class="auto-correct-label" for="ac">Auto-correct value to be between min and max</label>
+</div>
+<kendo-numerictextbox [style.width.px]="170" [value]="value" [min]="0" [max]="100" [autoCorrect]="autoCorrect">
+</kendo-numerictextbox> -->
