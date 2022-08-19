@@ -97,6 +97,8 @@ import { SwitchoverviewComponent } from './switchoverview/switchoverview.compone
 import { CustomtextareaComponent } from './customtextarea/customtextarea.component';
 import { TextboxoverviewComponent } from './textboxoverview/textboxoverview.component';
 import { LabelsoverviewComponent } from './labelsoverview/labelsoverview.component';
+import { AvataroverviewComponent } from './avataroverview/avataroverview.component';
+import { CardoverviewComponent } from './cardoverview/cardoverview.component';
 
 @NgModule({
   declarations: [
@@ -161,6 +163,8 @@ import { LabelsoverviewComponent } from './labelsoverview/labelsoverview.compone
     CustomtextareaComponent,
     TextboxoverviewComponent,
     LabelsoverviewComponent,
+    AvataroverviewComponent,
+    CardoverviewComponent,
   ],
   imports: [
     BrowserModule,

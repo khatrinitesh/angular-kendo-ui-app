@@ -37,12 +37,17 @@ import { SwitchoverviewComponent } from './switchoverview/switchoverview.compone
 import { CustomtextareaComponent } from './customtextarea/customtextarea.component'
 import { TextboxoverviewComponent } from './textboxoverview/textboxoverview.component'
 import { LabelsoverviewComponent } from './labelsoverview/labelsoverview.component'
+import { AvataroverviewComponent } from './avataroverview/avataroverview.component';
+
 
 enableProdMode();
 
 const routes: Routes = [
   {
     path: '', component: LayoutComponent
+  },
+  {
+    path: 'customavataroverview', component: AvataroverviewComponent
   },
   {
     path: 'abarocdes', component: BarocdesComponent
@@ -137,9 +142,6 @@ const routes: Routes = [
   {
     path: 'customlabelsoverview', component: LabelsoverviewComponent
   },
-
-
-
   {
     path: '**', component: ErrorComponent
   },

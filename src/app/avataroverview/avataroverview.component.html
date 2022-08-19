@@ -1,0 +1,98 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+<h5>Custom Content for Avatar</h5>
+<form class="k-form">
+    <div class="k-form-field">
+        <input kendoRadioButton type="radio" name="group" value="🍓" id="strawberry" checked [(ngModel)]="avatar" />
+        <label class="k-radio-label" for="strawberry">Strawberry</label>
+
+        <input kendoRadioButton type="radio" name="group" value="🍉" id="watermelon" [(ngModel)]="avatar" />
+        <label class="k-radio-label" for="watermelon">Watermelon</label>
+
+        <input kendoRadioButton type="radio" name="group" value="🍒" id="cherry" [(ngModel)]="avatar" />
+        <label class="k-radio-label">Cherry</label>
+    </div>
+</form>
+<div class="avatar-container">
+    <kendo-avatar class="user" rounded="large" size="large">
+        <span>{{avatar}}</span>
+    </kendo-avatar>
+</div>
+<h5>Avatar Border</h5>
+<div class="wrap">
+    <kendo-avatar [border]="true" [imageSrc]="imageSrc"></kendo-avatar>
+    <kendo-avatar [border]="true" fillMode="outilne" icon="user"></kendo-avatar>
+    <kendo-avatar [border]="true" fillMode="outline" initials="NK"></kendo-avatar>
+</div>
+<h5>Avatar fill</h5>
+<div class="wrap">
+    <span *ngFor="let fillOption of fillOptions">
+        <kendo-avatar [fillMode]="fillOption" icon="user" [border]="true"></kendo-avatar>
+    </span>
+</div>
+
+<h5>Avatar Predefined Sizes</h5>
+<div class="wrap">
+    <span *ngFor="let size of sizes">
+        <kendo-avatar [size]="size" [imageSrc]="imageSrc"></kendo-avatar>
+        <div class="size-name">{{size}}</div>
+    </span>
+</div>
+<h5>Avatar custom size</h5>
+<div class="wrap">
+    <kendo-avatar width="13px" height="53px" icon="user"></kendo-avatar>
+</div>
+
+
+<h5>Avatar Rounded options</h5>
+<div class="wrap">
+    <span *ngFor="let option of roundedOptions">
+        <kendo-avatar [rounded]="option" icon="user"></kendo-avatar>
+        <span class="label">
+            {{option ? (option | titlecase) : (option | json)}}
+        </span>
+    </span>
+</div>
+<h5>Avatar theme colors</h5>
+<div class="wrap">
+    <span *ngFor="let themeColor of themeColors">
+        <kendo-avatar [themeColor]="themeColor" icon="bell"></kendo-avatar>
+    </span>
+</div>
+<div class="avatar-container">
+    <kendo-avatar [imageSrc]="src" size="large"></kendo-avatar>
+    <kendo-avatar initials="JS" size="large"></kendo-avatar>
+    <kendo-avatar iconClass="k-icon k-i-user" size="large"></kendo-avatar>
+</div>
+<hr />
+<div class="list">
+    <div class="contact-list">Contacts</div>
+    <div class="contact" *ngFor="let contact of contactInitials">
+        <div class="k-hstack">
+            <kendo-avatar [initials]="contact.avatar"></kendo-avatar>
+            <div>
+                <h2>{{ contact.name }}</h2>
+                <p>{{ contact.position }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="contact" *ngFor="let contact of contactImages">
+        <div class="k-hstack">
+            <kendo-avatar [imageSrc]="contact.avatar"></kendo-avatar>
+            <div>
+                <h2>{{ contact.name }}</h2>
+                <p>{{ contact.position }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="k-hstack">
+            <kendo-avatar icon="user"> </kendo-avatar>
+            <div class="mate-info">
+                <h2>Unknown</h2>
+                <p>Not specified</p>
+            </div>
+            <div class="k-hstack"></div>
+        </div>
+    </div>
+</div>
