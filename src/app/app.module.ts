@@ -32,6 +32,7 @@ import "@progress/kendo-angular-intl/locales/bg/all";
 import { RTL } from "@progress/kendo-angular-l10n";
 import { ChartsModule } from "@progress/kendo-angular-charts";
 import { IconsModule } from "@progress/kendo-angular-icons";
+import { ScrollViewModule } from "@progress/kendo-angular-scrollview";
 
 import "hammerjs";
 
@@ -99,6 +100,10 @@ import { TextboxoverviewComponent } from './textboxoverview/textboxoverview.comp
 import { LabelsoverviewComponent } from './labelsoverview/labelsoverview.component';
 import { AvataroverviewComponent } from './avataroverview/avataroverview.component';
 import { CardoverviewComponent } from './cardoverview/cardoverview.component';
+import { ScrollviewCardComponent } from './cardoverview/scrollview-card/scrollview-card.component';
+import { CommentComponent } from './cardoverview/comment/comment.component';
+import { CommentActionsComponent } from './cardoverview/comment-actions/comment-actions.component';
+import { BuildingblocksComponent } from './buildingblocks/buildingblocks.component';
 
 @NgModule({
   declarations: [
@@ -165,6 +170,10 @@ import { CardoverviewComponent } from './cardoverview/cardoverview.component';
     LabelsoverviewComponent,
     AvataroverviewComponent,
     CardoverviewComponent,
+    ScrollviewCardComponent,
+    CommentComponent,
+    CommentActionsComponent,
+    BuildingblocksComponent,
   ],
   imports: [
     BrowserModule,
@@ -194,7 +203,8 @@ import { CardoverviewComponent } from './cardoverview/cardoverview.component';
     SliderModule,
     LabelModule,
     IntlModule,
-    RouterModule
+    RouterModule,
+    ScrollViewModule
   ],
   providers: [
     {

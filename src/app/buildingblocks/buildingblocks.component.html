@@ -1,0 +1,129 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+
+<div class="demo">
+    <kendo-card *ngFor="let card of mediaCards" width="260px">
+        <iframe *ngIf="card.videoSrc" kendoCardMedia height="267" [src]="card.videoSrc"></iframe>
+        <img *ngIf="card.imageSrc" kendoCardMedia [src]="card.imageSrc" />
+        <kendo-card-body>
+            <div>{{ card.description }}</div>
+        </kendo-card-body>
+        <kendo-card-actions [actions]="card.actionButtons" [layout]="card.actionsLayout"></kendo-card-actions>
+    </kendo-card>
+</div>
+
+<div class="demo">
+    <div>
+        <!-- Horizontal Card -->
+        <h5>Horizontal orientation</h5>
+        <kendo-card orientation="horizontal">
+            <img kendoCardMedia
+                src="https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/coffee_first.jpg" />
+            <div>
+                <kendo-card-header>
+                    <h1 kendoCardTitle>Coffee with friends</h1>
+                    <div kendoCardSubtitle>
+                        <span class="reviews">
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star-outline"></span>
+                            <div>4/5 (681)</div>
+                        </span>
+                    </div>
+                </kendo-card-header>
+                <kendo-card-body>
+                    <p>
+                        The right place to be if you're in love with high quality
+                        espresso or tea. We offer wide range to top coffee brands as
+                        Davidoff Cafe, Lavazza, Tchibo, Illy.
+                    </p>
+                </kendo-card-body>
+                <kendo-card-actions>
+                    <button kendoButton fillMode="flat" themeColor="primary">
+                        Review
+                    </button>
+                </kendo-card-actions>
+            </div>
+        </kendo-card>
+        <!-- Vertical Card -->
+        <h5>Vertical orientation</h5>
+        <kendo-card>
+            <img kendoCardMedia
+                src="https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/coffee_second.jpg" />
+            <div>
+                <kendo-card-header>
+                    <h1 kendoCardTitle>Coffee with friends</h1>
+                    <div kendoCardSubtitle>
+                        <span class="reviews">
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star" style="color: #ffce2a"></span>
+                            <span class="k-icon k-i-star-outline"></span>
+                            <div>4/5 (681)</div>
+                        </span>
+                    </div>
+                </kendo-card-header>
+                <kendo-card-body>
+                    <p>
+                        The right place to be if you're in love with high quality
+                        espresso or tea. We offer wide range to top coffee brands as
+                        Davidoff Cafe, Lavazza, Tchibo, Illy.
+                    </p>
+                </kendo-card-body>
+                <kendo-card-actions>
+                    <button kendoButton fillMode="flat" themeColor="primary">
+                        Review
+                    </button>
+                </kendo-card-actions>
+            </div>
+        </kendo-card>
+    </div>
+
+
+
+    <kendo-card width="360px">
+        <kendo-card-header class="k-hstack">
+            <kendo-avatar width="40px" height="40px" [imageSrc]="thumbnailSrc" shape="circle"></kendo-avatar>
+            <div>
+                <h1 kendoCardTitle>bg_tourism</h1>
+                <p kendoCardSubtitle>Bulgaria, Europe</p>
+            </div>
+        </kendo-card-header>
+    </kendo-card>
+    <kendo-card width="360px">
+        <kendo-card-header class="k-hstack">
+            <kendo-avatar width="40px" height="40px" [imageSrc]="thumbnailSrc" shape="circle"></kendo-avatar>
+            <div>
+                <h1 kendoCardTitle>bg_tourism</h1>
+                <p kendoCardSubtitle>Bulgaria, Europe</p>
+            </div>
+        </kendo-card-header>
+        <img [src]="cover" kendoCardMedia alt="cover_img" />
+        <kendo-card-body>
+            <h4>Black sea, Bulgaria</h4>
+            <hr kendoCardSeparator />
+            <p>Mollit aute esse cupidatat exercitation. Est voluptate enim commodo elit dolor irure culpa pariatur dolor
+                exercitation laborum minim irure. Ipsum mollit velit officia elit esse aliquip. Consectetur culpa ea ea
+                id
+                commodo aliqua nisi id enim exercitation in. Adipisicing exercitation adipisicing mollit anim enim id
+                consectetur aute pariatur. In dolor veniam tempor nulla sunt aliquip.</p>
+        </kendo-card-body>
+        <kendo-card-actions orientation="horizontal" layout="stretched">
+            <button kendoButton fillMode="flat" (click)="toggleLike()">
+                <span [ngClass]="heartIcon()"></span>
+                Like
+            </button>
+            <hr kendoCardSeparator orientation="vertical" />
+            <button kendoButton fillMode="flat">Share</button>
+            <hr kendoCardSeparator orientation="vertical" />
+            <button kendoButton fillMode="flat">Read More</button>
+        </kendo-card-actions>
+        <kendo-card-footer class="k-hstack">
+            <span>Created By @alex</span>
+            <span>Date </span>
+        </kendo-card-footer>
+        {{todayDate}}
+    </kendo-card>

@@ -38,6 +38,9 @@ import { CustomtextareaComponent } from './customtextarea/customtextarea.compone
 import { TextboxoverviewComponent } from './textboxoverview/textboxoverview.component'
 import { LabelsoverviewComponent } from './labelsoverview/labelsoverview.component'
 import { AvataroverviewComponent } from './avataroverview/avataroverview.component';
+import { CardoverviewComponent } from './cardoverview/cardoverview.component';
+import { BuildingblocksComponent } from './buildingblocks/buildingblocks.component';
+
 
 
 enableProdMode();
@@ -45,6 +48,13 @@ enableProdMode();
 const routes: Routes = [
   {
     path: '', component: LayoutComponent
+  },
+
+  {
+    path: 'custombuildingblocks', component: BuildingblocksComponent
+  },
+  {
+    path: 'customcardoverview', component: CardoverviewComponent
   },
   {
     path: 'customavataroverview', component: AvataroverviewComponent
