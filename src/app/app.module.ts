@@ -104,6 +104,16 @@ import { ScrollviewCardComponent } from './cardoverview/scrollview-card/scrollvi
 import { CommentComponent } from './cardoverview/comment/comment.component';
 import { CommentActionsComponent } from './cardoverview/comment-actions/comment-actions.component';
 import { BuildingblocksComponent } from './buildingblocks/buildingblocks.component';
+import { DraweroverviewComponent } from './draweroverview/draweroverview.component';
+import { ContentComponent } from './draweroverview/content/content.component';
+import { ExpansionoverviewComponent } from './expansionoverview/expansionoverview.component';
+import { GridlayoutoverivewComponent } from './gridlayoutoverivew/gridlayoutoverivew.component';
+import { TrendingArticleComponent } from './gridlayoutoverivew/trending-article/trending-article.component';
+import { RecommendedArticleComponent } from './gridlayoutoverivew/recommended-article/recommended-article.component';
+import { PanelbaroverviewComponent } from './panelbaroverview/panelbaroverview.component';
+import { SplitteroverviewComponent } from './splitteroverview/splitteroverview.component';
+import { StacklayoutoverviewComponent } from './stacklayoutoverview/stacklayoutoverview.component';
+import { StepperoverviewComponent } from './stepperoverview/stepperoverview.component';
 
 @NgModule({
   declarations: [
@@ -174,6 +184,16 @@ import { BuildingblocksComponent } from './buildingblocks/buildingblocks.compone
     CommentComponent,
     CommentActionsComponent,
     BuildingblocksComponent,
+    DraweroverviewComponent,
+    ContentComponent,
+    ExpansionoverviewComponent,
+    GridlayoutoverivewComponent,
+    TrendingArticleComponent,
+    RecommendedArticleComponent,
+    PanelbaroverviewComponent,
+    SplitteroverviewComponent,
+    StacklayoutoverviewComponent,
+    StepperoverviewComponent
   ],
   imports: [
     BrowserModule,

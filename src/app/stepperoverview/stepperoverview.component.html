@@ -1,0 +1,19 @@
+<h5 style="margin-bottom: 20px;">
+    The activation of the last step is prevented
+</h5>
+<kendo-stepper [steps]="steps" stepType="full" [(currentStep)]="currentStep" (activate)="onStepActivate($event)"
+    [linear]="false" [style.width.px]="500">
+</kendo-stepper>
+
+<kendo-stepper [style.width.px]="150" [steps]="steps"> </kendo-stepper>
+
+<h5 style="margin-bottom: 20px;">Custom Icons</h5>
+<kendo-stepper [style.width.px]="500" [steps]="stepsCustomIcons" [linear]="false" stepType="full">
+</kendo-stepper>
+
+<h5 style="margin-bottom: 20px;">Kendo UI Icons</h5>
+<kendo-stepper [steps]="steps" [linear]="false" stepType="full" [style.width.px]="500" [style.marginBottom.px]="50">
+</kendo-stepper>
+
+<kendo-stepper [steps]="steps" stepType="full" [(currentStep)]="current" [linear]="false" [style.width.px]="570">
+</kendo-stepper>

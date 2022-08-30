@@ -1,0 +1,18 @@
+<kendo-card width="auto" orientation="horizontal" class="card-article">
+    <div class="card-article-description k-d-flex-col">
+        <div class="author">{{ article.author }}</div>
+        <h1 kendoCardTitle class="title">{{ article.title }}</h1>
+        <p kendoCardSubtitle>{{ article.subtitle }}</p>
+        <div class="date k-d-flex">
+            <div>{{ formattedDate }}</div>
+            <div class="separator">|</div>
+            <div>{{ article.minsLength }} min read</div>
+        </div>
+    </div>
+    <div>
+        <img kendoCardMedia class="card-article-image" [src]="article.imagePath" />
+        <div *ngIf="article.imageText" class="photo-text">
+            {{ article.imageText }}
+        </div>
+    </div>
+</kendo-card>

@@ -1,0 +1,134 @@
+<div class="demo-header">
+    <button kendoButton icon="menu" fillMode="flat" styles="font-size: 24px;" (click)="drawer.toggle()"></button>
+</div>
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items2" [width]="100" mode="push" [(expanded)]="expanded">
+        <ng-template kendoDrawerItemTemplate let-item>
+            <div class="k-drawer-link" [routerLink]="item.path">
+                <span>{{ item.text }}</span>
+            </div>
+        </ng-template>
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <router-outlet></router-outlet>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<!-- <div class="custom-toolbar">
+    <button kendoButton icon="menu" fillMode="flat" (click)="drawer.toggle()"></button>
+    <span style="margin-left: 20px; font-weight: bold; font-size: 17px;">Weather Forecast in Europe</span>
+</div>
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [width]="175" [(expanded)]="expanded"
+        (select)="onSelect2($event)">
+        <ng-template kendoDrawerItemTemplate let-item>
+            <span class="k-icon item-icon flag {{ item.iconFlag }}"></span>
+            <div class="item-descr-wrap" *ngIf="expanded">
+                <div>{{ item.title }}</div>
+                <span class="item-descr">{{ item.description }}</span>
+            </div>
+        </ng-template>
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <span class="weather-icon {{ selected2.iconClass }}"></span>
+        <span class="weather">
+            <h2>{{ selected2.temp }}<span>ºC</span></h2>
+            <p>Sunny weather in {{ selected2.title }}</p>
+        </span>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push" [position]="position" [expanded]="true">
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <div class="k-form">
+            <div class="k-form-field">
+                <button kendoButton (click)="drawer.toggle()">
+                    Toggle the Drawer
+                </button>
+            </div>
+            <div class="k-form-field">
+                <label for="expandSwitch">Switch Drawer position</label>
+                <kendo-switch id="expandSwitch" [checked]="true" onLabel=" " offLabel=" "
+                    (valueChange)="onPositionChange($event)">
+                </kendo-switch>
+            </div>
+            <div class="k-form-field">
+                <p>
+                    Current drawer position is <b>{{ position }}</b>
+                </p>
+            </div>
+        </div>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [(expanded)]="expanded">
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <button kendoButton (click)="drawer.toggle()">Toggle the Drawer</button>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" [mode]="expandMode" [expanded]="true">
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <div class="k-form">
+            <div class="k-form-field">
+                <button kendoButton (click)="drawer.toggle()">
+                    Toggle the Drawer
+                </button>
+            </div>
+            <div class="k-form-field">
+                <label for="expandSwitch">Switch Drawer expand mode</label>
+                <kendo-switch id="expandSwitch" [checked]="true" onLabel=" " offLabel=" "
+                    (valueChange)="onExpandModeChange($event)">
+                </kendo-switch>
+            </div>
+            <div class="k-form-field">
+                <p>
+                    Current drawer mode is <b>{{ expandMode }}</b>
+                </p>
+            </div>
+        </div>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push"> </kendo-drawer>
+
+    <kendo-drawer-content>
+        <button kendoButton (click)="drawer.toggle()">Toggle the Drawer</button>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push" [(expanded)]="expanded">
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <button kendoButton (click)="switchExpanded()">
+            Switch the Drawer state
+        </button>
+    </kendo-drawer-content>
+</kendo-drawer-container>
+
+<div class="custom-toolbar">
+    <button kendoButton icon="menu" fillMode="flat" (click)="drawer.toggle()"></button>
+    <span class="mail-box">Mail Box</span>
+</div>
+<kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [expanded]="true" (select)="onSelect($event)">
+    </kendo-drawer>
+
+    <kendo-drawer-content>
+        <my-content [selectedItem]="selected"></my-content>
+    </kendo-drawer-content>
+</kendo-drawer-container> -->

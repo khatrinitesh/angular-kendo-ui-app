@@ -1,0 +1,85 @@
+ .options-wrapper {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        margin: 0 0 20px;
+        padding: 20px;
+      }
+      .options-wrapper kendo-label {
+        text-align: center;
+        display: inline-grid;
+      }
+      .options-wrapper .k-label {
+        color: #a1a1a1;
+      }
+      .example-wrapper {
+        width: 300px;
+        margin: 15px auto 0;
+        box-shadow: 0px 10px 20px #00000029;
+        border-radius: 30px;
+      }
+      .page {
+        padding: 20px 10px;
+      }
+      .content {
+        background: #f9f9f9;
+        border-radius: 30px 30px 0 0;
+        height: 450px;
+      }
+      .k-hstack,
+      .k-vstack {
+        height: 100%;
+      }
+      .box {
+        padding: 4px;
+      }
+      .first {
+        background-color: #fae47a;
+      }
+      .second {
+        background-color: #fbd17f;
+      }
+      .third {
+        background-color: #f5bf8b;
+      }
+      .fourth {
+        background-color: #ebaa79;
+      }
+      .k-flex-10 {
+        flex: 1 1 10%;
+      }
+      .k-flex-20 {
+        flex: 1 1 20%;
+      }
+      .k-flex-30 {
+        flex: 1 1 30%;
+      }
+      .k-flex-40 {
+        flex: 1 1 40%;
+      }
+
+.photo-desc {
+        text-align: right;
+        font-size: 10px;
+        font-style: italic;
+      }
+
+      .card-img {
+        height: 375px;
+        object-fit: cover;
+      }
+
+      .demo-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .demo-title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .btn-group {
+        align-self: center;
+      }

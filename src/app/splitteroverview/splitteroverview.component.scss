@@ -1,0 +1,20 @@
+.pane-content {
+        padding: 0 10px;
+      }
+      h3 {
+        font-size: 1.2em;
+        margin: 10px 0;
+        padding: 0;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      kendo-splitter + kendo-splitter {
+        margin: 20px 0 0;
+      }
+      h3 {
+        font-size: 1.2em;
+        padding: 10px;
+      }

@@ -1,0 +1,96 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+<div class="options-wrapper">
+    <kendo-label text="Gap">
+        <kendo-numerictextbox [style.width.px]="200" [min]="0" [value]="gap" (valueChange)="gapChange($event)">
+        </kendo-numerictextbox>
+    </kendo-label>
+</div>
+<div class="example-wrapper">
+    <div class="page">
+        <div class="content">
+            <kendo-stacklayout [gap]="gap" orientation="vertical">
+                <div class="box first k-flex-40"></div>
+                <div class="box second k-flex-20"></div>
+                <div class="box third k-flex-10"></div>
+                <div class="box fourth k-flex-30"></div>
+            </kendo-stacklayout>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="demo-header">
+    <span class="demo-title">Popular creators</span>
+    <div class="btn-group">
+        <kendo-buttongroup selection="single">
+            <button kendoButton [selected]="true" [toggleable]="true" (click)="toggleOrientation('horizontal')">
+                Horizontal
+            </button>
+            <button kendoButton [toggleable]="true" (click)="toggleOrientation('vertical')">
+                Vertical
+            </button>
+        </kendo-buttongroup>
+    </div>
+</div>
+<kendo-stacklayout [gap]="15" [orientation]="orientation">
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <kendo-avatar width="40px" height="40px" [imageSrc]="lindseyAvatar" shape="circle"></kendo-avatar>
+            <div>
+                <h1 kendoCardTitle>Lindsey Mango</h1>
+                <p kendoCardSubtitle>34K followers</p>
+            </div>
+        </kendo-card-header>
+        <img class="card-img" [src]="lindseyImage" kendoCardMedia alt="lindsey_img" />
+        <kendo-card-body>
+            <p class="photo-desc">
+                Photos by Rikonavt and by Ivana La on Unsplash
+            </p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary">
+                See more from Lindsey
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <kendo-avatar width="40px" height="40px" [imageSrc]="vincenzoAvatar" shape="circle"></kendo-avatar>
+            <div>
+                <h1 kendoCardTitle>Vincenzo Mays</h1>
+                <p kendoCardSubtitle>32K followers</p>
+            </div>
+        </kendo-card-header>
+        <img class="card-img" [src]="vincenzoImage" kendoCardMedia alt="vincenzo_img" />
+        <kendo-card-body>
+            <p class="photo-desc">
+                Photos by Irene Strong and by the BlackRabbit on Unsplash
+            </p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary">
+                See more from Vicenzo
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+    <kendo-card width="auto">
+        <kendo-card-header class="k-hstack">
+            <kendo-avatar width="40px" height="40px" [imageSrc]="marissaAvatar" shape="circle"></kendo-avatar>
+            <div>
+                <h1 kendoCardTitle>Marissa Webb</h1>
+                <p kendoCardSubtitle>36K followers</p>
+            </div>
+        </kendo-card-header>
+        <img class="card-img" [src]="marissaImage" kendoCardMedia alt="marissa_img" />
+        <kendo-card-body>
+            <p class="photo-desc">
+                Photos by JJ Jordan and by Silvana Carlos on Unsplash
+            </p>
+        </kendo-card-body>
+        <kendo-card-actions layout="center">
+            <button kendoButton fillMode="flat" themeColor="primary">
+                See more from Marissa
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+</kendo-stacklayout>

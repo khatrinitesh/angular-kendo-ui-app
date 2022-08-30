@@ -1,6 +1,156 @@
 <a routerLink="/" class="btn btn-primary">Back</a>
 <hr />
 
+<kendo-card width="315px" orientation="vertical">
+    <kendo-card-header class="k-hstack">
+        <h5 kendoCardTitle>Passenger:</h5>
+        <h5>George Hudson</h5>
+    </kendo-card-header>
+    <kendo-card-body>
+        <div class="k-hstack">
+            <div class="k-column k-text-left">Departure</div>
+            <div class="k-column k-text-right">Arrival</div>
+        </div>
+
+        <div class="k-hstack">
+            <div class="k-column k-text-left">
+                <div class="k-display-4">SOF</div>
+                <div>
+                    6 Dec 2017<br />
+                    10:30
+                </div>
+            </div>
+            <div class="k-column k-display-4 k-text-center">✈️</div>
+            <div class="k-column k-text-right">
+                <div class="k-display-4">LON</div>
+                <div>
+                    6 Dec 2017<br />
+                    12:30
+                </div>
+            </div>
+        </div>
+        <hr kendoCardSeparator />
+        <div class="k-hstack">
+            <div class="k-column k-text-left">
+                <div class="k-display-4">LON</div>
+                <div>
+                    12 Dec 2017<br />
+                    18:30
+                </div>
+            </div>
+            <div class="k-column k-display-4 k-text-center">✈️</div>
+            <div class="k-column k-text-right">
+                <div class="k-display-4">SOF</div>
+                <div>
+                    12 Dec 2017<br />
+                    22:30
+                </div>
+            </div>
+        </div>
+    </kendo-card-body>
+    <kendo-card-footer>
+        <div class="k-hstack">
+            <div class="k-column k-text-left">Total:</div>
+            <div class="k-column k-text-right">BGN 234</div>
+        </div>
+    </kendo-card-footer>
+</kendo-card>
+
+<div class="demo">
+    <kendo-card>
+        <img kendoCardMedia
+            src="https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/cheesecake.jpg" />
+        <kendo-card-body>
+            <h4>No-Bake Cheesecake</h4>
+            <div>
+                <hr kendoCardSeparator />
+                <div class="recipe-wrap">
+                    This is truly the most perfect and easy no-bake cheesecake - a
+                    smooth and creamy dessert that sets up beautifully in the
+                    refrigerator.
+                    <div>{{ action?.text }}</div>
+                </div>
+            </div>
+        </kendo-card-body>
+        <kendo-card-actions layout="stretched" [actions]="cardActions" (action)="onActionClick($event)">
+        </kendo-card-actions>
+    </kendo-card>
+</div>
+
+<div class="demo">
+    <kendo-card>
+        <img kendoCardMedia
+            src="https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/waffles.jpg" />
+        <kendo-card-body>
+            <h4>Pumpkin Waffles</h4>
+            <div *ngIf="expanded">
+                <hr kendoCardSeparator />
+                <div class="recipe-wrap">
+                    Mix together flour, baking powder, salt, cinnamon, nutmeg, ginger,
+                    and cloves in a large bowl. In a second bowl, add egg yolks,
+                    sugar, pumpkin, milk, and oil; Whip the egg until stiff peaks
+                    form. Gently fold in the flour mixture followed by the whipped egg
+                    whites. Cook according to your waffle iron directions. Serve with
+                    butter and maple syrup.
+                </div>
+            </div>
+        </kendo-card-body>
+        <hr kendoCardSeparator *ngIf="horizontalStretched" />
+        <kendo-card-actions [orientation]="actionsOrientation" [layout]="actionsLayout">
+            <button kendoButton fillMode="flat" (click)="toggleLike2()">
+                <span [ngClass]="heartIcon2()"></span>
+                Like
+            </button>
+            <hr kendoCardSeparator orientation="vertical" *ngIf="horizontalStretched" />
+            <button kendoButton fillMode="flat" themeColor="primary" (click)="toggleRecipe()">
+                <span class="k-icon k-i-more-vertical"></span>
+                {{ btnText }}
+            </button>
+        </kendo-card-actions>
+    </kendo-card>
+
+    <div class="example-config">
+        <div>Actions Orientation</div>
+        <label class="k-radio-label" for="horizontal">
+            <input kendoRadioButton type="radio" id="horizontal" value="horizontal" name="actionsOrientation"
+                [(ngModel)]="actionsOrientation" />
+            Horizontal
+        </label>
+
+        <label class="k-radio-label" for="vertical">
+            <input kendoRadioButton type="radio" id="vertical" value="vertical" name="actionsOrientation"
+                [(ngModel)]="actionsOrientation" />
+            Vertical
+        </label>
+        <hr />
+
+        <div>Actions Layout</div>
+        <label class="k-radio-label" for="start">
+            <input kendoRadioButton type="radio" id="start" value="start" name="actionsLayout"
+                [(ngModel)]="actionsLayout" />
+            Start
+        </label>
+
+        <label class="k-radio-label" for="end">
+            <input kendoRadioButton type="radio" id="end" value="end" name="actionsLayout"
+                [(ngModel)]="actionsLayout" />
+            End
+        </label>
+
+        <label class="k-radio-label" for="stretched">
+            <input class="k-radio" type="radio" id="stretched" value="stretched" name="actionsLayout"
+                [(ngModel)]="actionsLayout" />
+            Stretched
+        </label>
+
+        <label class="k-radio-label" for="center">
+            <input kendoRadioButton type="radio" id="center" value="center" name="actionsLayout"
+                [(ngModel)]="actionsLayout" />
+            Center
+        </label>
+    </div>
+</div>
+
 <div class="demo">
     <kendo-card *ngFor="let card of mediaCards" width="260px">
         <iframe *ngIf="card.videoSrc" kendoCardMedia height="267" [src]="card.videoSrc"></iframe>

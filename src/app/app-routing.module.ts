@@ -40,7 +40,13 @@ import { LabelsoverviewComponent } from './labelsoverview/labelsoverview.compone
 import { AvataroverviewComponent } from './avataroverview/avataroverview.component';
 import { CardoverviewComponent } from './cardoverview/cardoverview.component';
 import { BuildingblocksComponent } from './buildingblocks/buildingblocks.component';
-
+import { DraweroverviewComponent } from './draweroverview/draweroverview.component';
+import { ExpansionoverviewComponent } from './expansionoverview/expansionoverview.component';
+import { GridlayoutoverivewComponent } from './gridlayoutoverivew/gridlayoutoverivew.component';
+import { PanelbaroverviewComponent } from './panelbaroverview/panelbaroverview.component';
+import { SplitteroverviewComponent } from './splitteroverview/splitteroverview.component';
+import { StacklayoutoverviewComponent } from './stacklayoutoverview/stacklayoutoverview.component';
+import { StepperoverviewComponent } from './stepperoverview/stepperoverview.component';
 
 
 enableProdMode();
@@ -49,7 +55,29 @@ const routes: Routes = [
   {
     path: '', component: LayoutComponent
   },
+  {
+    path: 'app-stepperoverview', component: StepperoverviewComponent
+  },
 
+  {
+    path: 'stacklayoutoverview', component: StacklayoutoverviewComponent
+  },
+  {
+    path: 'splitteroverview', component: SplitteroverviewComponent
+  },
+
+  {
+    path: 'panelbaroverview', component: PanelbaroverviewComponent
+  },
+  {
+    path: 'gridlayoutoverivew', component: GridlayoutoverivewComponent
+  },
+  {
+    path: 'expansionoverview', component: ExpansionoverviewComponent
+  },
+  {
+    path: 'customdraweroverview', component: DraweroverviewComponent
+  },
   {
     path: 'custombuildingblocks', component: BuildingblocksComponent
   },

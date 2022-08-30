@@ -1,0 +1,21 @@
+:host {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-items: flex-start;
+      }
+
+
+      .k-button {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      kendo-expansionpanel {
+        width: 600px;
+      }

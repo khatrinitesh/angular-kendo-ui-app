@@ -1,6 +1,6 @@
 import { Component, OnInit, Sanitizer } from '@angular/core';
 import * as  moment from 'moment';
-import { CardAction, ActionsLayout } from "@progress/kendo-angular-layout";
+import { CardAction, ActionsLayout, Orientation } from "@progress/kendo-angular-layout";
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 
@@ -19,7 +19,54 @@ interface MyMediaCard {
 })
 export class BuildingblocksComponent implements OnInit {
 
+  public action: CardAction = null;
 
+  public onActionClick(action: CardAction): void {
+    this.action = action;
+  }
+
+  public cardActions: Array<CardAction> = [
+    {
+      text: "Like it!",
+      flat: true,
+    },
+    {
+      text: "Love it!",
+      flat: true,
+      primary: true,
+    },
+    {
+      text: "Cook it?",
+      flat: true,
+    },
+  ];
+
+
+  public expanded = false;
+  public btnText = "More";
+
+  public actionsOrientation: Orientation = "horizontal";
+  public actionsLayout: ActionsLayout = "end";
+
+  public get horizontalStretched(): boolean {
+    return (
+      this.actionsOrientation === "horizontal" &&
+      this.actionsLayout === "stretched"
+    );
+  }
+
+  public toggleRecipe(): void {
+    this.expanded = !this.expanded;
+    this.btnText = this.expanded ? "Less" : "More";
+  }
+
+  public toggleLike2(): void {
+    this.liked = !this.liked;
+  }
+
+  public heartIcon2(): string {
+    return this.liked ? "k-icon k-i-heart" : "k-icon k-i-heart-outline";
+  }
 
   public mediaCards: Array<MyMediaCard> = [
     {

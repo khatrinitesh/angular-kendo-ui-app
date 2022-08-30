@@ -1,0 +1,120 @@
+my-app {
+        padding: 0;
+      }
+
+      .demo-header {
+        padding: 5px;
+      }
+
+      kendo-drawer-content {
+        height: 500px;
+        overflow: auto;
+        padding-left: 10px;
+      }
+
+//  html,
+//       body,
+//       my-app {
+//         padding: 0;
+//         height: 100%;
+//       }
+
+//       my-app {
+//         display: flex;
+//         flex-direction: column;
+//       }
+
+//       kendo-drawer-container {
+//         flex: 1 1 auto;
+//         overflow-y: auto;
+//       }
+//       .k-icon {
+//         font-size: 20px;
+//       }
+//       .custom-toolbar {
+//         width: 100%;
+//         background-color: #f6f6f6;
+//         line-height: 10px;
+//         border-bottom: inset;
+//         border-bottom-width: 1px;
+//         padding: 3px 8px;
+//         color: #656565;
+//       }
+//       .mail-box {
+//         margin-left: 20px;
+//         font-weight: bold;
+//         font-size: 17px;
+//       }
+
+//       my-app {
+//         padding: 0;
+//       }
+//       kendo-drawer-content {
+//         padding: 20px;
+//       }
+//       kendo-drawer-container {
+//         position: fixed;
+//         width: 100%;
+//         height: 100%;
+//       }
+//       .k-drawer-item {
+//         align-items: center;
+//       }
+//       .weather {
+//         margin: 0 auto 30px;
+//         text-align: center;
+//       }
+//       .weather-icon {
+//         display: block;
+//         margin: 30px auto 10px;
+//         width: 128px;
+//         height: 128px;
+//       }
+//       .k-drawer-item .item-icon {
+//         height: 35px;
+//       }
+//       .custom-toolbar {
+//         width: 100%;
+//         background-color: #f6f6f6;
+//         line-height: 10px;
+//         border-bottom: inset;
+//         border-bottom-width: 1px;
+//         padding: 3px 8px;
+//         color: #656565;
+//       }
+//       .sunny {
+//         background: url("https://demos.telerik.com/kendo-ui/content/web/tabstrip/weather.png")
+//           transparent no-repeat 0 0;
+//       }
+//       .cloudy {
+//         background: url("https://demos.telerik.com/kendo-ui/content/web/tabstrip/weather.png")
+//           transparent no-repeat -128px 0;
+//       }
+//       .item-descr {
+//         margin-top: -5px;
+//       }
+//       .item-descr-wrap > span {
+//         font-size: 70%;
+//       }
+//       .item-descr-wrap {
+//         display: flex;
+//         flex-direction: column;
+//       }
+//       .flag {
+//         background-size: contain;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         background-color: transparent;
+//       }
+//       .france-flag {
+//         background-image: url("https://demos.telerik.com/kendo-ui/content/web/drawer/france-flag.png");
+//       }
+//       .spain-flag {
+//         background-image: url("https://demos.telerik.com/kendo-ui/content/web/drawer/spain-flag.png");
+//       }
+//       .italy-flag {
+//         background-image: url("https://demos.telerik.com/kendo-ui/content/web/drawer/italy-flag.png");
+//       }
+//       .germany-flag {
+//         background-image: url("https://demos.telerik.com/kendo-ui/content/web/drawer/germany-flag.png");
+//       }

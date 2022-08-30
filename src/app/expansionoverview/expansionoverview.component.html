@@ -1,0 +1,112 @@
+<div class="wrapper">
+    <kendo-expansionpanel title="Colombia" expandIcon="fa fa-plus" collapseIcon="fa fa-minus" [disabled]="true">
+        The name “Colombia” is derived from the last name of the Italian navigator
+        Christopher Columbus. It was conceived by the Venezuelan revolutionary
+        Francisco de Miranda as a reference to all of the New World, but
+        especially to those portions under Spanish law. The name was later adopted
+        by the Republic of Colombia of 1819, formed from the territories of the
+        old Viceroyalty of New Granada (modern-day Colombia, Panama, Venezuela,
+        Ecuador, and northwest Brazil).
+    </kendo-expansionpanel>
+
+    <kendo-expansionpanel title="Default Animation">
+        The name “Colombia” is derived from the last name of the Italian
+        navigator Christopher Columbus. It was conceived by the Venezuelan
+        revolutionary Francisco de Miranda as a reference to all of the New
+        World, but especially to those portions under Spanish law. The name was
+        later adopted by the Republic of Colombia of 1819, formed from the
+        territories of the old Viceroyalty of New Granada (modern-day Colombia,
+        Panama, Venezuela, Ecuador, and northwest Brazil).
+    </kendo-expansionpanel>
+
+    <kendo-expansionpanel title="Custom Duration" [animation]="duration">
+        The name “Guyana” derives from Guiana, the original name for the region
+        that formerly included Guyana (British Guiana), Suriname (Dutch Guiana),
+        French Guiana, and parts of Colombia, Venezuela and Brazil. According to
+        the Oxford English Dictionary, “Guyana” comes from an indigenous
+        Amerindian language and means “land of many waters”.
+    </kendo-expansionpanel>
+
+    <kendo-expansionpanel title="No Animation" [animation]="false">
+        The origin of the name of Ecuador is from Spain. When the Spaniards
+        colonized the land they called it “el ecuador” which translated means
+        “the equator”.
+    </kendo-expansionpanel>
+
+
+    <button kendoButton (click)="toggleContent()">
+        Toggle Content Visibility
+    </button>
+    <kendo-expansionpanel #panel title="Chile" subtitle="South America">
+        There are various theories about the origin of the word Chile. According
+        to 17th-century Spanish chronicler Diego de Rosales, the Incas called
+        the valley of the Aconcagua Chili by corruption of the name of a
+        Picunche tribal chief (cacique) called Tili, who ruled the area at the
+        time of the Incan conquest in the 15th century. Another theory points to
+        the similarity of the valley of the Aconcagua with that of the Casma
+        Valley in Peru, where there was a town and valley named Chili.
+    </kendo-expansionpanel>
+
+    <button kendoButton (click)="expandCollapseContent()">
+        Expand/Collapse
+    </button>
+    <kendo-expansionpanel title="Colombia" [(expanded)]="expandedState">
+        The name “Colombia” is derived from the last name of the Italian
+        navigator Christopher Columbus. It was conceived by the Venezuelan
+        revolutionary Francisco de Miranda as a reference to all of the New
+        World, but especially to those portions under Spanish law. The name was
+        later adopted by the Republic of Colombia of 1819, formed from the
+        territories of the old Viceroyalty of New Granada (modern-day Colombia,
+        Panama, Venezuela, Ecuador, and northwest Brazil).
+    </kendo-expansionpanel>
+    <kendo-expansionpanel title="Ecuador" [(expanded)]="expandedState">
+        The name “Guyana” derives from Guiana, the original name for the region
+        that formerly included Guyana (British Guiana), Suriname (Dutch Guiana),
+        French Guiana, and parts of Colombia, Venezuela and Brazil. According to
+        the Oxford English Dictionary, “Guyana” comes from an indigenous
+        Amerindian language and means “land of many waters”.
+    </kendo-expansionpanel>
+    <kendo-expansionpanel title="Colombia" [(expanded)]="expandedState">
+        The origin of the name of Ecuador is from Spain. When the Spaniards
+        colonized the land they called it “el ecuador” which translated means
+        “the equator”.
+    </kendo-expansionpanel>
+    <hr />
+
+    <kendo-expansionpanel [expanded]="true">
+        <ng-template kendoExpansionPanelTitleDirective>
+            <div class="header-content">
+                <kendo-icon name="globe" [style.marginRight.px]="10"></kendo-icon>
+                <span>Colombia</span>
+            </div>
+        </ng-template>
+        The name “Colombia” is derived from the last name of the Italian navigator
+        Christopher Columbus. It was conceived by the Venezuelan revolutionary
+        Francisco de Miranda as a reference to all of the New World, but
+        especially to those portions under Spanish law. The name was later adopted
+        by the Republic of Colombia of 1819, formed from the territories of the
+        old Viceroyalty of New Granada (modern-day Colombia, Panama, Venezuela,
+        Ecuador, and northwest Brazil).
+    </kendo-expansionpanel>
+
+    <kendo-expansionpanel title="Colombia" subtitle="South America">
+        The name “Colombia” is derived from the last name of the Italian navigator
+        Christopher Columbus. It was conceived by the Venezuelan revolutionary
+        Francisco de Miranda as a reference to all of the New World, but
+        especially to those portions under Spanish law. The name was later adopted
+        by the Republic of Colombia of 1819, formed from the territories of the
+        old Viceroyalty of New Granada (modern-day Colombia, Panama, Venezuela,
+        Ecuador, and northwest Brazil).
+    </kendo-expansionpanel>
+
+
+    <kendo-expansionpanel *ngFor="let item of items; index as i" [title]="item.country" [subtitle]="item.continent"
+        [expanded]="item.expanded" (action)="onAction(i)">
+        <div class="content">
+            <div class="image-container">
+                <img [src]="item.imageUrl" [alt]="item.country" />
+            </div>
+            <span class="content-text">{{ item.text }}</span>
+        </div>
+    </kendo-expansionpanel>
+</div>

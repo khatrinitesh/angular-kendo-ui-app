@@ -1,3 +1,12 @@
+.k-hstack {
+        justify-content: space-between;
+      }
+
+      .k-card-footer .k-hstack,
+      .k-card-header .k-hstack {
+        justify-content: space-evenly;
+      }
+
 .demo {
         display: flex;
         justify-content: space-evenly;
@@ -11,4 +20,31 @@
 
       h5 {
         padding: 10px;
+      }
+
+      .k-card-body h4 {
+        text-align: center;
+      }
+      .recipe-wrap {
+        padding-top: 12px;
+      }
+      .k-icon {
+        font-size: 14px;
+        margin-right: 4px;
+      }
+      .k-card-actions-vertical.k-card-actions-start .k-button,
+      .k-card-actions-vertical.k-card-actions-end .k-button {
+        width: 50px;
+      }
+      .k-card-separator {
+        height: auto;
+      }
+      .k-icon.k-i-heart {
+        color: #ff6358;
+      }
+      .example-config {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 315px;
       }

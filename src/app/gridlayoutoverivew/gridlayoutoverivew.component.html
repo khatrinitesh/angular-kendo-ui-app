@@ -1,0 +1,97 @@
+<div class="grid-layout-container">
+    <div class="example-wrapper">
+        <div class="page">
+            <div class="content">
+                <kendo-gridlayout [rows]="[90, 90, 90, 90, 90]" [cols]="[90, 90, 90]" [gap]="5">
+                    <kendo-gridlayout-item [col]="1" [row]="1" [colSpan]="2" class="box rect">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="3" [row]="1" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="1" [row]="2" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="2" [row]="2" [colSpan]="2" [rowSpan]="2" class="box big">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="1" [row]="3" [rowSpan]="2" class="box rect">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="2" [row]="4" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="3" [row]="4" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="1" [row]="5" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="2" [row]="5" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                    <kendo-gridlayout-item [col]="3" [row]="5" class="box">
+                        <span>Box</span>
+                    </kendo-gridlayout-item>
+                </kendo-gridlayout>
+            </div>
+        </div>
+    </div>
+
+    <kendo-gridlayout [gap]="{ rows: 6, cols: 10 }" [rows]="[
+          { height: 20 },
+          { height: 100 },
+          { height: 100 },
+          { height: 20 },
+          { height: 660 }
+        ]" [cols]="[{ width: 270 }, { width: 270 }, { width: 310 }]">
+        <kendo-gridlayout-item [row]="1" [col]="1" [colSpan]="3">
+            <div class="k-text-inverse k-text-uppercase k-font-weight-bold">
+                Trending articles
+            </div>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="2" [col]="1">
+            <trending-article [position]="1" [article]="articles[0]"></trending-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="2" [col]="2">
+            <trending-article [position]="2" [article]="articles[1]"></trending-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="2" [col]="3">
+            <trending-article [position]="3" [article]="articles[2]"></trending-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="3" [col]="1">
+            <trending-article [position]="4" [article]="articles[3]"></trending-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="3" [col]="2">
+            <trending-article [position]="5" [article]="articles[4]"></trending-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="3" [col]="3">
+            <trending-article [position]="6" [article]="articles[5]"></trending-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="4" [col]="1" [colSpan]="2">
+            <div class="k-text-inverse k-text-uppercase k-font-weight-bold">
+                Recommended for you
+            </div>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="5" [col]="1" [colSpan]="2">
+            <recommended-article *ngFor="let article of recommendedArticles" [article]="article"></recommended-article>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="4" [col]="3">
+            <div class="k-text-inverse k-text-uppercase k-font-weight-bold">
+                Events this month
+            </div>
+        </kendo-gridlayout-item>
+        <kendo-gridlayout-item [row]="5" [col]="3">
+            <kendo-calendar type="infinite" class="event-calendar" [(value)]="selectedDate"
+                (valueChange)="handleValueChange()" bottomView="year" topView="decade" navigation="false">
+            </kendo-calendar>
+            <div class="k-text-inverse k-text-uppercase k-font-weight-bold k-mt-4">
+                Discover more
+            </div>
+            <kendo-chiplist class="k-flex-wrap" selection="multiple">
+                <kendo-chip *ngFor="let tag of tags" [label]="tag.name" fillMode="outline">
+                </kendo-chip>
+            </kendo-chiplist>
+        </kendo-gridlayout-item>
+    </kendo-gridlayout>
+</div>

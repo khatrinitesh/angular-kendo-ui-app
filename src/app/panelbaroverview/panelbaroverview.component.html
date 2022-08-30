@@ -1,0 +1,203 @@
+<a routerLink="/" class="btn btn-primary">Back</a>
+<hr />
+<kendo-panelbar [items]="items" [animate]="false"></kendo-panelbar>
+<div class="panelbar-wrapper">
+    <kendo-panelbar>
+        <kendo-panelbar-item>
+            <ng-template kendoPanelBarItemTitle>
+                <span class="fa-stack fa-lg stacked-icon">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-money fa-stack-1x"></i>
+                </span>
+                Available currencies
+            </ng-template>
+            <kendo-panelbar-item iconClass="fa fa-btc" title="Bitcoin"></kendo-panelbar-item>
+            <kendo-panelbar-item iconClass="fa fa-eur" title="EUR"></kendo-panelbar-item>
+            <kendo-panelbar-item iconClass="fa fa-usd" title="USD"></kendo-panelbar-item>
+            <kendo-panelbar-item iconClass="fa fa-gbp" title="GBP"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+    </kendo-panelbar>
+</div>
+
+<kendo-panelbar>
+    <kendo-panelbar-item title="Item Title" [expanded]="true">
+        <ng-template kendoPanelBarContent>
+            <div class="custom-template">Item content</div>
+        </ng-template>
+    </kendo-panelbar-item>
+</kendo-panelbar>
+<div class="example-config row">
+    <div class="col-sm-4">
+        <p>Expand modes:</p>
+        <input kendoRadioButton type="radio" id="single" name="expandModeGroup" [checked]="expandMode === 0"
+            (change)="expandMode = 0" />
+        <label for="single">Single expand mode</label> <br />
+        <input kendoRadioButton type="radio" id="multiple" name="expandModeGroup" [checked]="expandMode === 2"
+            (change)="expandMode = 2" />
+        <label for="multiple">Multiple expand mode</label> <br />
+        <input kendoRadioButton type="radio" id="full" name="expandModeGroup" [checked]="expandMode === 1"
+            (change)="expandMode = 1" />
+        <label for="full">Full expand mode</label>
+    </div>
+    <div class="col-sm-4">
+        <p>Height (Full expand mode only):</p>
+        <kendo-numerictextbox [(value)]="height" *ngIf="expandMode === 1" [min]="200" [max]="500" [autoCorrect]="true"
+            [step]="5" [format]="{ n: 0 }" id="height">
+        </kendo-numerictextbox>
+    </div>
+    <style>
+        label {
+            font-weight: normal;
+        }
+    </style>
+</div>
+<kendo-panelbar [expandMode]="expandMode" [height]="height + 'px'" (stateChange)="onPanelChange($event)">
+    <kendo-panelbar-item title="Invasion Games" [expanded]="true">
+        <kendo-panelbar-item title="Hockey"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Soccer"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Rugby"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Basketball"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Water polo"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Netball"></kendo-panelbar-item>
+    </kendo-panelbar-item>
+    <kendo-panelbar-item title="Striking & Fielding Games">
+        <kendo-panelbar-item title="Cricket"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Softball"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Baseball"></kendo-panelbar-item>
+    </kendo-panelbar-item>
+    <kendo-panelbar-item title="Net & Court Games">
+        <kendo-panelbar-item title="Badminton"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Squash"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Tennis" [selected]="true"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Table Tennis"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Volleyball"></kendo-panelbar-item>
+    </kendo-panelbar-item>
+    <kendo-panelbar-item title="Target Games">
+        <kendo-panelbar-item title="Golf"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Lawn bowls"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Tenpin bowling"></kendo-panelbar-item>
+    </kendo-panelbar-item>
+</kendo-panelbar>
+
+<div class="panelbar-wrapper">
+    <kendo-panelbar>
+        <kendo-panelbar-item [disabled]="true" title="Team"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Projects" [selected]="true"> [expanded]="true"
+            <kendo-panelbar-item title="Business Plan"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Forecast"></kendo-panelbar-item>
+            <kendo-panelbar-item title="OKRs"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Programs"></kendo-panelbar-item>
+        <kendo-panelbar-item title="Communication"></kendo-panelbar-item>
+    </kendo-panelbar>
+</div>
+
+
+<div class="panelbar-wrapper">
+    <kendo-panelbar>
+        <kendo-panelbar-item title="My Web Site" icon="folder" [expanded]="true">
+            <kendo-panelbar-item title="images" icon="folder" [expanded]="true">
+                <kendo-panelbar-item title="logo.png" icon="image"></kendo-panelbar-item>
+                <kendo-panelbar-item title="body-back.png" icon="image"></kendo-panelbar-item>
+                <kendo-panelbar-item title="my-photo.png" icon="image"></kendo-panelbar-item>
+            </kendo-panelbar-item>
+            <kendo-panelbar-item title="resources" icon="folder" [expanded]="true">
+                <kendo-panelbar-item title="pdf" icon="folder">
+                    <kendo-panelbar-item title="prices.pdf" icon="pdf"></kendo-panelbar-item>
+                    <kendo-panelbar-item title="brochure.pdf" icon="pdf"></kendo-panelbar-item>
+                </kendo-panelbar-item>
+                <kendo-panelbar-item title="zip" icon="folder"></kendo-panelbar-item>
+            </kendo-panelbar-item>
+            <kendo-panelbar-item title="about.html" icon="file"></kendo-panelbar-item>
+            <kendo-panelbar-item title="contacts.html" icon="file"></kendo-panelbar-item>
+            <kendo-panelbar-item title="index.html" icon="file"></kendo-panelbar-item>
+            <kendo-panelbar-item title="portfolio.html" icon="file"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+    </kendo-panelbar>
+</div>
+
+<div class="panelbar-wrapper">
+    <kendo-panelbar>
+        <kendo-panelbar-item title="Golf" [imageUrl]="sportsIconUrl('golf')">
+            <kendo-panelbar-item title="Top News" [imageUrl]="iconUrl('star')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Photo Galleries" [imageUrl]="iconUrl('photo')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Video Records" [imageUrl]="iconUrl('video')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Radio Records" [imageUrl]="iconUrl('speaker')"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Baseball" [imageUrl]="sportsIconUrl('baseball')">
+            <kendo-panelbar-item title="Top News" [imageUrl]="iconUrl('star')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Photo Galleries" [imageUrl]="iconUrl('photo')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Video Records" [imageUrl]="iconUrl('video')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Radio Records" [imageUrl]="iconUrl('speaker')"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Swimming" [imageUrl]="sportsIconUrl('swimming')">
+            <kendo-panelbar-item title="Top News" [imageUrl]="iconUrl('star')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Photo Galleries" [imageUrl]="iconUrl('photo')"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Snowboarding" [imageUrl]="sportsIconUrl('snowboarding')">
+            <kendo-panelbar-item title="Photo Galleries" [imageUrl]="iconUrl('photo')"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Video Records" [imageUrl]="iconUrl('video')"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+    </kendo-panelbar>
+</div>
+
+
+<div class="panelbar-wrapper">
+    <kendo-panelbar [expandMode]="kendoPanelBarExpandMode" [items]="categoriesView">
+    </kendo-panelbar>
+</div>
+
+
+<div class="panelbar-wrapper">
+    <kendo-panelbar [items]="items"></kendo-panelbar>
+</div>
+
+<div class="panelbar-wrapper">
+    <kendo-panelbar>
+        <kendo-panelbar-item title="My Teammates" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+                <div>
+                    <div class="teamMate">
+                        <img [src]="imageUrl('andrew')" alt="Andrew Fuller" />
+                        <span class="mate-info">
+                            <h2>Andrew Fuller</h2>
+                            <p>Team Lead</p>
+                        </span>
+                    </div>
+                    <div class="teamMate">
+                        <img [src]="imageUrl('nancy')" alt="Nancy Leverling" />
+                        <span class="mate-info">
+                            <h2>Nancy Leverling</h2>
+                            <p>Sales Associate</p>
+                        </span>
+                    </div>
+                    <div class="teamMate">
+                        <img [src]="imageUrl('robert')" alt="Robert King" />
+                        <span class="mate-info">
+                            <h2>Robert King</h2>
+                            <p>Business System Analyst</p>
+                        </span>
+                    </div>
+                </div>
+            </ng-template>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Projects">
+            <kendo-panelbar-item title="New Business Plan"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Sales Forecasts">
+                <kendo-panelbar-item title="Q1 Forecast"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Q2 Forecast"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Q3 Forecast"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Q4 Forecast"></kendo-panelbar-item>
+            </kendo-panelbar-item>
+            <kendo-panelbar-item title="Sales Reports"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Programs">
+            <kendo-panelbar-item title="Monday"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Tuesday"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Wednesday"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Thursday"></kendo-panelbar-item>
+            <kendo-panelbar-item title="Friday"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Communication" [disabled]="true"></kendo-panelbar-item>
+    </kendo-panelbar>
+</div>
